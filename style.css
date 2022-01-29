@@ -1,0 +1,140 @@
+.studyDiv {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  /*   gap: 10px 10px; */
+    grid-auto-flow: row;
+    grid-template-areas:
+      "back . forward"
+      ". QADiv ."
+      "noKnown . yesKnown";
+  }
+  
+  .yesKnown { grid-area: yesKnown; }
+  .back { grid-area: back; }
+  .forward { grid-area: forward; }
+  .noKnown { grid-area: noKnown; }
+  .QADiv { grid-area: QADiv; }
+  
+  .yesKnown, .back, .forward, .noKnown, .QADiv{
+    margin:auto;
+  /*   width:50%; */
+  }
+  
+  /* ================= */
+  .center{
+    margin: auto;
+    width:50%;
+  }
+  
+  /* ================= */
+  /* .cards {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 3em;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "questionDiv answerDiv deleteDiv";
+  } */
+  /* .questionDiv { grid-area: questionDiv; }
+  .answerDiv { grid-area: answerDiv; }
+  .deleteDiv { grid-area: deleteDiv; } */
+   */
+  .questionDiv, .answerDiv{
+    margin:auto;
+    width:50%;
+  }
+  .answerDiv{
+    margin-left:1.8em;
+  }
+  .questionDiv{
+    margin-right: 1.8em;
+  }
+  .deleteDiv{
+  /*   margin-left:1em; */
+  /*   padding-left:1em; */
+  /*   margin-left:auto;
+    width:50%; */
+   
+  }
+  /* ================= */
+  .cardsFlex{
+    display:flex;
+  /*   flex-direction:row; */
+    flex-direction:row;
+  }
+  
+  .cardFlexColumn{
+    display:flex;
+    flex-direction: column;
+  }
+  /* ================= */
+  .boxData {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  /*   grid-auto-rows: minmax(min-content, max-content); */
+  
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "boxes delete";
+  }
+  .boxes { grid-area: boxes; }
+  .delete { grid-area: delete; }
+  
+  
+  /* ================= */
+  .boxAadd {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "boxData boxData"
+      "addingData addingData"
+      ". addButton";
+  }
+  
+  .addButton { grid-area: addButton; }
+  .addingData { grid-area: addingData; }
+  .boxData { grid-area: boxData; }
+  /* ================= */
+  
+  .editingTop{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "backButtonClass nameClass saveButtonClass";
+  }
+  
+  .backButtonClass { grid-area: backButtonClass; }
+  .nameClass { grid-area: nameClass; }
+  .saveButtonClass { grid-area: saveButtonClass; }
+  
+  /* ================= */
+  .left{
+    text-align:left;
+  }
+  .right{
+    text-align:right;
+  }
+  .widthFull{
+    width:100%;
+  }
+  
+  /* ================= */
+  .boxesGrid {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "questionClass answerClass";
+  }
+  
+  .questionClass { grid-area: questionClass; }
+  .answerClass { grid-area: answerClass; }
+  
