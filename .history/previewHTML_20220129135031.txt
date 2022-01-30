@@ -1,5 +1,2 @@
 https://htmlpreview.github.io/?https://github.com/pixman92/practiceFlashCardsForSensei/blob/main/index.html
 
-make excutable
-chmod +x filename
-
