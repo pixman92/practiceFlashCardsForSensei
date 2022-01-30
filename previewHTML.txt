@@ -3,3 +3,6 @@ https://htmlpreview.github.io/?https://github.com/pixman92/practiceFlashCardsFor
 make excutable
 chmod +x filename
 
+
+
+test

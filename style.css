@@ -84,7 +84,8 @@
   
   
   /* ================= */
-  .boxAadd {  display: grid;
+  .boxAdd {  
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px 5px;
@@ -95,12 +96,13 @@
       ". addButton";
   }
   
-  .addButton { grid-area: addButton; }
-  .addingData { grid-area: addingData; }
   .boxData { grid-area: boxData; }
+  .addingData { grid-area: addingData; }
+  .addButton { grid-area: addButton; }
   /* ================= */
   
   .editingTop{
+      /* grid for top of editing page */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -126,7 +128,8 @@
   }
   
   /* ================= */
-  .boxesGrid {  display: grid;
+  .boxesGrid {  
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
