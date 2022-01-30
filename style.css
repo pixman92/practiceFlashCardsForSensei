@@ -1,0 +1,21 @@
+.studyDiv {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+/*   gap: 10px 10px; */
+  grid-auto-flow: row;
+  grid-template-areas:
+    "back . forward"
+    ". QADiv ."
+    "noKnown . yesKnown";
+}
+
+.yesKnown { grid-area: yesKnown; }
+.back { grid-area: back; }
+.forward { grid-area: forward; }
+.noKnown { grid-area: noKnown; }
+.QADiv { grid-area: QADiv; }
+
+.yesKnown, .back, .forward, .noKnown, .QADiv{
+  margin:auto;
+/*   width:50%; */
+}
