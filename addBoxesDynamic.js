@@ -25,10 +25,25 @@ function creatingThroughFlashCards(){
         if(index!=0){
             console.log('flashcardIndex', index);
             keepingTrackOfIndexJSON.addToObj([['index', index]]);
-            addQABox(index, [[myJSONFlashCards.JSONobj.innerArray[index][0][0][1]
-            ], [myJSONFlashCards.JSONobj.innerArray[index][0][1][1]]]);
+            addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
         }
     });
+
+    var htmlString = "";
+    htmlArray.forEach((item, index)=>{
+        console.log('htmlForEach', item);
+        htmlString += item;
+    });
+
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
+    var indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
+    indexOfBlank++;
+    console.log('indexOfBlank', indexOfBlank);
+
+    addBlankBox(indexOfBlank);
+    $('.addBoxesHTMLHere').html('');
+    $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
+
 }
 
 
@@ -44,9 +59,9 @@ function resetIndex(){
         console.log('keepingtrackIndex', item.index);
         addQABox(item.index, flashCardData[index][0], flashCardData[index][1]);
     });
-    var htmlSring = "";
+    var htmlString = "";
     htmlArray.forEach((item, index)=>{
-        htmlSring += item;
+        htmlString += item;
     });
 
     var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
@@ -107,7 +122,7 @@ function addQABox(index, question, answer){
     }
 
 }
-var blankBoxHTML = [];
+var blankBoxHTML;
 function addBlankBox(newIndex){
     blankBoxHTML = [
         '   <div class="marginTop addBoxesHTMLHere">','<div class="boxesAndDelete">',
