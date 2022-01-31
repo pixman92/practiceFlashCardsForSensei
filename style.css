@@ -25,12 +25,15 @@
   margin: auto;
   width:50%;
 }
+.center2{
+  margin: auto;
+}
 /* ================= */
 
 .editingTop{
   /* grid for top of editing page */
 display: grid;
-grid-template-columns: 5% 90% 5%;
+grid-template-columns: 5% 90% 2%;
 grid-template-rows: 1fr;
 gap: 0px 0px;
 grid-auto-flow: row;
@@ -87,7 +90,7 @@ grid-template-areas:
 
 /* ================= */
 .widthFull{
-  width: 98%;
+  width: 88%;
 }
 .right{
   right:0;
