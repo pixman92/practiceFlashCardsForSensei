@@ -1,11 +1,11 @@
-var savedHTMLArray = [];
 function buttonListeners(){
 
 
     $('.addingButton').on('click', ()=>{
         var newIndex = pullLatest();
-        savedHTMLArray = [];
-        savedHTMLArray[0] = $('.addBoxesHTMLHere').html();
+        // savedHTMLArray = [];
+        // savedHTML2 = [];
+        // savedHTMLArray[0] = $('.addBoxesHTMLHere').html();
 
         var newBlankCard = ['<div class="boxesAndDelete">',
         '   <!--  boxData/addingData/addbutton',
@@ -23,7 +23,7 @@ function buttonListeners(){
         '         </div>',
         '         <div class="answerClass widthFull">',
         '            <div class="answerDiv">',
-        '               <textarea class="answer'+newIndex+' widthFull">answer</textarea>',
+        '               <textarea class="answer'+newIndex+' widthFull"></textarea>',
         '            </div>',
         '         </div>',
         '         <!-- </div> -->',
@@ -39,11 +39,16 @@ function buttonListeners(){
         '      </div>',
         '   </div>',
         '</div>'].join('');
-        savedHTMLArray[1]= newBlankCard;
+        // savedHTMLArray[1]= newBlankCard;
 
+        // savedHTML2.push(savedHTMLArray[0]);
+        // savedHTML2.push(savedHTMLArray[1]);
+        
+        savedHTML = $('.addBoxesHTMLHere').html();
+        
 
-        // $('.addBoxesHTMLHere').html(savedHTML + newBlankCard);
-        // savedHTML = "";
+        $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html() + newBlankCard);
+        savedHTML = "";
     });
            
 }

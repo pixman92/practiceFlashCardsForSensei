@@ -21,6 +21,7 @@ function pullLatest(){
 var flashCardData=[];
 function resetIndex(){
     // makeIndexJSON();
+    flashCardData=[];
     myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
         if(index!=0){
             console.log('flashcardIndex', index);
@@ -36,6 +37,7 @@ function resetIndex(){
     });
 }
 
+var htmlArray=[];
 function addQABox(index, question, answer){
 
     if(!index){
@@ -78,7 +80,8 @@ function addQABox(index, question, answer){
        '   </div>',
        ].join('');
        
-           $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html()+myArray);
+        //    $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html()+myArray);
+        htmlArray.push($('.addBoxesHTMLHere').html(myArray));
     }
 
 }
