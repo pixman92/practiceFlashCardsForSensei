@@ -13,11 +13,9 @@ function removeElement(indexSearch){
 
 function pullLatest(){
     makeIndexJSON();
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
-    var indexLast = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
-    indexLast++;
-    addBlankBox(indexLast);
     resetIndex();
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
+    
     return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
 
 }
@@ -45,6 +43,13 @@ function resetIndex(){
     htmlArray.forEach((item, index)=>{
         htmlSring += item;
     });
+
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
+    var indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
+    indexOfBlank++;
+
+    addBlankBox(indexOfBlank);    
+
     $('.addBoxesHTMLHere').html('');
     $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
 }
