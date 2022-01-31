@@ -19,8 +19,9 @@ function pullLatest(){
     return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
 
 }
-
+var indexOfBlank;
 function creatingThroughFlashCards(){
+    htmlArray=[]
     myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
         if(index!=0){
             console.log('flashcardIndex', index);
@@ -28,22 +29,33 @@ function creatingThroughFlashCards(){
             addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
         }
     });
-
+    
     var htmlString = "";
     htmlArray.forEach((item, index)=>{
-        console.log('htmlForEach', item);
+        // console.log('htmlForEach', item);
         htmlString += item;
     });
 
     var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
-    var indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
+    indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
     indexOfBlank++;
     console.log('indexOfBlank', indexOfBlank);
 
     addBlankBox(indexOfBlank);
     $('.addBoxesHTMLHere').html('');
     $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
+    // checkForBlank();
 
+}
+
+function checkForBlank(){
+    if($('.question'+indexOfBlank).val()=='' && $('.answer'+indexOfBlank).val()==''){
+        console.log('index', indexOfBlank);
+        console.log('blank!');
+    }else{
+        console.log('index', indexOfBlank);
+        console.log('not blank!');
+    }
 }
 
 
