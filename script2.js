@@ -5,7 +5,7 @@ window.onload=()=>{
     makeInstanceFlashCards();
     firstIndex('DaveKovar');
     addQuestionAddAnswerToPushFlashCards('where to begin?', 'white belt!');
-    addQuestionAddAnswerToPushFlashCards('how to train?', 'everyday!');s
+    addQuestionAddAnswerToPushFlashCards('how to train?', 'everyday!');
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
   

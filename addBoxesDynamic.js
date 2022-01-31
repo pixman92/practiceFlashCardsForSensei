@@ -1,5 +1,5 @@
 function addQABox(){
- myArra = ['   <div class="marginTop addBoxesHTMLHere>',
+ myArray = ['   <div class="marginTop addBoxesHTMLHere">',
 '      <div class="boxesAndDelete">',
 '         <!--  boxData/addingData/addbutton',
 '   for the boxData, middle row and final addngButton -->',
@@ -11,12 +11,12 @@ function addQABox(){
 '               <!-- <div class="boxesGrid center"> -->',
 '               <div class="questionClass widthFull ">',
 '                  <div class="questionDiv">',
-'                     <textarea class='question1 widthFull'>question</textarea>',
+'                     <textarea class="question1 widthFull">question</textarea>',
 '                  </div>',
 '               </div>',
 '               <div class="answerClass widthFull">',
 '                  <div class="answerDiv">',
-'                     <textarea class='answer1 widthFull'>answer</textarea>',
+'                     <textarea class="answer1 widthFull">answer</textarea>',
 '                  </div>',
 '               </div>',
 '               <!-- </div> -->',
@@ -33,5 +33,8 @@ function addQABox(){
 '         </div>',
 '      </div>',
 '   </div>',
-]
+].join('');
+
+    $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html()+myArray);
+
 }
