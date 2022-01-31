@@ -11,7 +11,20 @@ function removeElement(indexSearch){
     });
 }
 
+function addingLatestIndex(){
+    makeIndexJSON();
+    addQABox(1);
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray['length'];
+
+    var nextIndex = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index
+
+    addQABox(nextIndex);
+
+    return nextIndex;
+}
+
 function addQABox(index){
+
     keepingTrackOfIndexJSON.addToObj([['index', index]])
     if(!index){
         console.log('UNDEFINED! Try again');

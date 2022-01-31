@@ -1,19 +1,4 @@
-window.onload=()=>{
-    hide();
-    show('editingCards');
-    
-    makeInstanceFlashCards();
-    firstIndex('DaveKovar');
-    addQuestionAddAnswerToPushFlashCards('where to 
-    addQuestionAddAnswerToPushFlashCards('does x = this?' , 'nope');
-    
-    // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
-  
-    
-    runClick();
-  
-  }
-  
+
   // =================
   var arrayOfClasses = ["study", "editingCards"];
   function hide() {
@@ -67,3 +52,30 @@ window.onload=()=>{
   }
   
   // =================
+  function addingCardsForEdit(){
+    
+    cardsArray = ['  <div class="boxData">',
+  '      <div class="cardsFlex">',
+  '      <div class="cards">',
+  '         <div class="boxesAndDelete">',
+  '            <!--      Boxes          -->',
+  '           <div class="boxes cardsFlex">                 <div class="questionDiv">',
+  '                  <textarea class="question1">question</textarea>',
+  '                </div>',
+  '    <div class="answerDiv">',
+  '      <textarea class="answer1">answer</textarea>',
+  '    </div>',
+  '<!--      DeleteButton          --> ',
+  '            <div class="deleteDiv center">',
+  '              <button>X</button>',
+  '            </div>',
+  '            </div>',
+  '           </div>',
+  '        </div>  ',
+  '    </div>',
+  '  </div>',
+  ].join('');
+    $('.addingData').html($('.addingData').html()+cardsArray);
+    
+    
+  }
