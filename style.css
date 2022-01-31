@@ -30,7 +30,7 @@
 .editingTop{
   /* grid for top of editing page */
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 5% 90% 5%;
 grid-template-rows: 1fr;
 gap: 0px 0px;
 grid-auto-flow: row;
@@ -60,7 +60,7 @@ grid-template-areas:
 
 .boxesQAndA{  
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   gap: 1em 1em;
   grid-auto-flow: row;
@@ -74,7 +74,7 @@ grid-template-areas:
 /* ================= */
 .boxesAndDelete {  
   display: grid;
-  grid-template-columns: 1fr .8fr;
+  grid-template-columns: 95% 5%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -84,3 +84,11 @@ grid-template-areas:
 
 .boxesClass { grid-area: boxesClass; width:100%;}
 .deleteButtonClass { grid-area: deleteButtonClass; }
+
+/* ================= */
+.widthFull{
+  width: 98%;
+}
+.right{
+  right:0;
+}
