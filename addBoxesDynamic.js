@@ -12,9 +12,13 @@ function removeElement(indexSearch){
 }
 
 function pullLatest(){
+    makeIndexJSON();
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
+    var indexLast = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
+    indexLast++;
+    addBlankBox(indexLast);
     resetIndex();
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"]
-    return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index
+    return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
 
 }
 
@@ -42,7 +46,7 @@ function resetIndex(){
         htmlSring += item;
     });
     $('.addBoxesHTMLHere').html('');
-    $('.addBoxesHTMLHere').html(htmlSring);
+    $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
 }
 
 var htmlArray=[];
@@ -92,5 +96,41 @@ function addQABox(index, question, answer){
         htmlArray.push(myArray);
     }
 
+}
+var blankBoxHTML = [];
+function addBlankBox(newIndex){
+    blankBoxHTML = [
+        '   <div class="marginTop addBoxesHTMLHere">','<div class="boxesAndDelete">',
+        '   <!--  boxData/addingData/addbutton',
+        'for the boxData, middle row and final addngButton -->',
+        '   <!-- boxData - first row -->',
+        '   <div class="boxesClass">',
+        '      <div class="boxesQAndA">',
+        '         <!-- <div class="boxes"> -->',
+        '         <!-- boxesGrid - 2 columns/1row -->',
+        '         <!-- <div class="boxesGrid center"> -->',
+        '         <div class="questionClass widthFull ">',
+        '            <div class="questionDiv">',
+        '               <textarea class="question'+newIndex+' widthFull"></textarea>',
+        '            </div>',
+        '         </div>',
+        '         <div class="answerClass widthFull">',
+        '            <div class="answerDiv">',
+        '               <textarea class="answer'+newIndex+' widthFull"></textarea>',
+        '            </div>',
+        '         </div>',
+        '         <!-- </div> -->',
+        '      </div>',
+        '   </div>',
+        '   <div class="deleteButtonClass">',
+        '      <!-- </div> -->',
+        '      <div class="delete">',
+        '         <!--      DeleteButton          -->',
+        '         <div class="deleteDiv center">',
+        '            <button class="delete1">X</button>',
+        '         </div>',
+        '      </div>',
+        '   </div>',
+        '</div>'].join('');
 }
 
