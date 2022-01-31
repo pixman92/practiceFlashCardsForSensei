@@ -11,6 +11,13 @@ function removeElement(indexSearch){
     });
 }
 
+function pullLatest(){
+    resetIndex();
+    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"]
+    return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index
+
+}
+
 var flashCardData=[];
 function resetIndex(){
     // makeIndexJSON();
@@ -23,10 +30,10 @@ function resetIndex(){
         }
     })
 
-    // keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
-    //     console.log('keepingtrackIndex', item);
-    //     addQABox(item, flashCardData[index], flashCardData[index]);
-    // });
+    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
+        console.log('keepingtrackIndex', item.index);
+        addQABox(item.index, flashCardData[index][0], flashCardData[index][1]);
+    });
 }
 
 function addQABox(index, question, answer){
