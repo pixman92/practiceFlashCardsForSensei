@@ -11,23 +11,25 @@ function removeElement(indexSearch){
     });
 }
 
+var flashCardData=[];
 function resetIndex(){
     // makeIndexJSON();
-
     myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
         if(index!=0){
             console.log('flashcardIndex', index);
             keepingTrackOfIndexJSON.addToObj([['index', index]]);
+            flashCardData.push([[myJSONFlashCards.JSONobj.innerArray[index][0][0][1]
+            ], [myJSONFlashCards.JSONobj.innerArray[index][0][1][1]]]);
         }
     })
 
-    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
-        console.log('keepingtrackIndex', index);
-        addQABox(index);
-    });
+    // keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
+    //     console.log('keepingtrackIndex', item);
+    //     addQABox(item, flashCardData[index], flashCardData[index]);
+    // });
 }
 
-function addQABox(index){
+function addQABox(index, question, answer){
 
     if(!index){
         console.log('UNDEFINED! Try again');
@@ -45,12 +47,12 @@ function addQABox(index){
        '               <!-- <div class="boxesGrid center"> -->',
        '               <div class="questionClass widthFull ">',
        '                  <div class="questionDiv">',
-       '                     <textarea class="question'+index+' widthFull">question</textarea>',
+       '                     <textarea class="question'+index+' widthFull">'+question+'</textarea>',
        '                  </div>',
        '               </div>',
        '               <div class="answerClass widthFull">',
        '                  <div class="answerDiv">',
-       '                     <textarea class="answer'+index+' widthFull">answer</textarea>',
+       '                     <textarea class="answer'+index+' widthFull">'+answer+'</textarea>',
        '                  </div>',
        '               </div>',
        '               <!-- </div> -->',
