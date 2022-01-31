@@ -20,20 +20,25 @@ function pullLatest(){
 
 }
 
+function creatingThroughFlashCards(){
+    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+        if(index!=0){
+            console.log('flashcardIndex', index);
+            keepingTrackOfIndexJSON.addToObj([['index', index]]);
+            addQABox(index, [[myJSONFlashCards.JSONobj.innerArray[index][0][0][1]
+            ], [myJSONFlashCards.JSONobj.innerArray[index][0][1][1]]]);
+        }
+    });
+}
+
+
 var flashCardData=[];
 function resetIndex(){
     // makeIndexJSON();
     flashCardData=[];
     htmlArray=[];
     keepingTrackOfIndexJSON=new JSON_Instance();
-    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
-        if(index!=0){
-            console.log('flashcardIndex', index);
-            keepingTrackOfIndexJSON.addToObj([['index', index]]);
-            flashCardData.push([[myJSONFlashCards.JSONobj.innerArray[index][0][0][1]
-            ], [myJSONFlashCards.JSONobj.innerArray[index][0][1][1]]]);
-        }
-    })
+    
 
     keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
         console.log('keepingtrackIndex', item.index);
