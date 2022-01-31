@@ -19,3 +19,28 @@
   margin:auto;
 /*   width:50%; */
 }
+
+/* ================= */
+.center{
+  margin: auto;
+  width:50%;
+}
+/* ================= */
+
+.editingTop{
+  /* grid for top of editing page */
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "backButtonClass nameClass saveButtonClass";
+}
+
+.backButtonClass { grid-area: backButtonClass; }
+.nameClass { grid-area: nameClass; }
+.saveButtonClass { grid-area: saveButtonClass; }
+
+/* ================= */
+
