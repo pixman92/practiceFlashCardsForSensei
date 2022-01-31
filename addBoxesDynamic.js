@@ -1,5 +1,10 @@
+var keepingTrackOfIndexJSON;
+function indexJSON(){
+    keepingTrackOfIndexJSON = new JSON_Instance();
+}   
 
 function addQABox(index){
+    keepingTrackOfIndexJSON.addToObj([['index', index]])
     if(!index){
         console.log('UNDEFINED! Try again');
     }else{
