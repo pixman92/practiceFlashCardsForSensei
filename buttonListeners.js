@@ -3,11 +3,13 @@ function buttonListeners(){
 
     $('.addingButton').on('click', ()=>{
         var newIndex = pullLatest();
+        newIndex++;
         // savedHTMLArray = [];
         // savedHTML2 = [];
         // savedHTMLArray[0] = $('.addBoxesHTMLHere').html();
 
-        var newBlankCard = ['<div class="boxesAndDelete">',
+        var newBlankCard = [
+        '   <div class="marginTop addBoxesHTMLHere">','<div class="boxesAndDelete">',
         '   <!--  boxData/addingData/addbutton',
         'for the boxData, middle row and final addngButton -->',
         '   <!-- boxData - first row -->',
@@ -44,11 +46,11 @@ function buttonListeners(){
         // savedHTML2.push(savedHTMLArray[0]);
         // savedHTML2.push(savedHTMLArray[1]);
         
-        savedHTML = $('.addBoxesHTMLHere').html();
+        // savedHTML = $('.addBoxesHTMLHere').html();
         
 
         $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html() + newBlankCard);
-        savedHTML = "";
+        // savedHTML = "";
     });
            
 }

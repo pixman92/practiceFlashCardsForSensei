@@ -22,6 +22,8 @@ var flashCardData=[];
 function resetIndex(){
     // makeIndexJSON();
     flashCardData=[];
+    htmlArray=[];
+    keepingTrackOfIndexJSON=new JSON_Instance();
     myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
         if(index!=0){
             console.log('flashcardIndex', index);
@@ -35,6 +37,12 @@ function resetIndex(){
         console.log('keepingtrackIndex', item.index);
         addQABox(item.index, flashCardData[index][0], flashCardData[index][1]);
     });
+    var htmlSring = "";
+    htmlArray.forEach((item, index)=>{
+        htmlSring += item;
+    });
+    $('.addBoxesHTMLHere').html('');
+    $('.addBoxesHTMLHere').html(htmlSring);
 }
 
 var htmlArray=[];
@@ -81,7 +89,7 @@ function addQABox(index, question, answer){
        ].join('');
        
         //    $('.addBoxesHTMLHere').html($('.addBoxesHTMLHere').html()+myArray);
-        htmlArray.push($('.addBoxesHTMLHere').html(myArray));
+        htmlArray.push(myArray);
     }
 
 }
