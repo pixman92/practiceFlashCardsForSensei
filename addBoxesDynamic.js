@@ -1,7 +1,15 @@
 var keepingTrackOfIndexJSON;
-function indexJSON(){
+function makeIndexJSON(){
     keepingTrackOfIndexJSON = new JSON_Instance();
 }   
+
+function removeElement(indexSearch){
+    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, indexGoingThrough)=>{
+        if(keepingTrackOfIndexJSON.JSONobj.innerArray[indexGoingThrough].index == indexSearch){
+            keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
+        }
+    });
+}
 
 function addQABox(index){
     keepingTrackOfIndexJSON.addToObj([['index', index]])
