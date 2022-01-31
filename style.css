@@ -33,7 +33,7 @@
 .editingTop{
   /* grid for top of editing page */
 display: grid;
-grid-template-columns: 5% 90% 2%;
+grid-template-columns: 5% 97% 2%;
 grid-template-rows: 1fr;
 gap: 0px 0px;
 grid-auto-flow: row;
@@ -94,4 +94,8 @@ grid-template-areas:
 }
 .right{
   right:0;
+}
+
+.marginTop{
+  margin-top:2em;
 }
