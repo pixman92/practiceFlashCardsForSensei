@@ -43,4 +43,31 @@ grid-template-areas:
 .saveButtonClass { grid-area: saveButtonClass; }
 
 /* ================= */
+.boxesGrid {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "questionClass answerClass";
+}
+
+.questionClass { grid-area: questionClass; }
+.answerClass { grid-area: answerClass; }
+
+/* ================= */
+
+.boxesQAndA.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "questionClass answerClass";
+}
+
+.answerClass { grid-area: answerClass; }
+.questionClass { grid-area: questionClass; }
 
