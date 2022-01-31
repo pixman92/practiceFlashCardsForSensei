@@ -11,21 +11,24 @@ function removeElement(indexSearch){
     });
 }
 
-function addingLatestIndex(){
-    makeIndexJSON();
-    addQABox(1);
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray['length'];
+function resetIndex(){
+    // makeIndexJSON();
 
-    var nextIndex = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index
+    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+        if(index!=0){
+            console.log('flashcardIndex', index);
+            keepingTrackOfIndexJSON.addToObj([['index', index]]);
+        }
+    })
 
-    addQABox(nextIndex);
-
-    return nextIndex;
+    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
+        console.log('keepingtrackIndex', index);
+        addQABox(index);
+    });
 }
 
 function addQABox(index){
 
-    keepingTrackOfIndexJSON.addToObj([['index', index]])
     if(!index){
         console.log('UNDEFINED! Try again');
     }else{

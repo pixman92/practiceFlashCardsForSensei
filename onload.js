@@ -11,5 +11,5 @@ window.onload = ()=>{
   
     
     runClick();
-    addingLatestIndex();
+    makeIndexJSON();
 }

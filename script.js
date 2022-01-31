@@ -44,10 +44,12 @@
     });
   }
   function saveIt(){
+    //save to local storage
     myJSONFlashCards.saveToLocalStorage("saveMeFlash")
   
   }
   function retrieveIt(){
+    //retrieve from local storage
     myJSONFlashCards.getFromLocalStorage("saveMeFlash", true) 
   }
   
