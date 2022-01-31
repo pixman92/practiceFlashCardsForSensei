@@ -58,11 +58,11 @@ grid-template-areas:
 
 /* ================= */
 
-.boxesQAndA.container {  
+.boxesQAndA{  
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 1em 1em;
   grid-auto-flow: row;
   grid-template-areas:
     "questionClass answerClass";
@@ -71,3 +71,16 @@ grid-template-areas:
 .answerClass { grid-area: answerClass; }
 .questionClass { grid-area: questionClass; }
 
+/* ================= */
+.boxesAndDelete {  
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "boxesClass deleteButtonClass";
+}
+
+.boxesClass { grid-area: boxesClass; width:100%;}
+.deleteButtonClass { grid-area: deleteButtonClass; }
