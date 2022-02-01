@@ -83,6 +83,11 @@ function buttonListeners(){
         show('editingCards');
     });
 
+    // =============================
+    $('.forwardCard').on('click', ()=>{
+        proceedCard();
+    });
+
 }
 function deleteButtons(){
     myJSONFlashCards.JSONobj.innerArray.forEach((item,index)=>{
