@@ -6,7 +6,7 @@ function removeElement(indexSearch){
         myJSONFlashCards.JSONobj.innerArray.splice(indexSearch, 1);
         populate();
         saveIt();
-        buttonListeners();
+        deleteButtons();
         // debugger;
     }
 }
@@ -121,7 +121,7 @@ function addBlankBox(newIndex){
         '      <div class="delete">',
         '         <!--      DeleteButton          -->',
         '         <div class="deleteDiv center">',
-        '            <button class="delete1">X</button>',
+        '            <button class="delete'+newIndex+'">X</button>',
         '         </div>',
         '      </div>',
         '   </div>',

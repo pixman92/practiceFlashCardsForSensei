@@ -14,5 +14,6 @@ window.onload = ()=>{
     retrieveIt();
     populate();
     buttonListeners();
+    deleteButtons();
     // saveIt();
 }
