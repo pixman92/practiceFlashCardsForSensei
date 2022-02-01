@@ -51,7 +51,8 @@
   var flipped=true;
   function runClick(){
     // flipped = false;
-    flipped=true;
+    // flipped=!flipped;
+    // debugger;    //set to debug at this line
     $('.QADiv').on('click', ()=>{
       // debugger;    //set to debug at this line
 
@@ -62,13 +63,16 @@
         //question
         $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
         flipped=!flipped;
+        // debugger;    //set to debug at this line
       }else{
         // answer
         $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
         flipped=!flipped;
+        // debugger;    //set to debug at this line
       }
+      // flipped=!flipped;
+      // debugger;    //set to debug at this line
       // runClick();
-      debugger;    //set to debug at this line
     });
   }
   var cardPos=1;

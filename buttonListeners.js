@@ -80,6 +80,7 @@ function buttonListeners(){
     
     $('.toEdit').on('click', ()=>{
         hide();
+        show('editWidth');
         show('editingCards');
     });
 
