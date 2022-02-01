@@ -87,45 +87,28 @@ function buttonListeners(){
     // =============================
     $('.forwardCard').on('click', ()=>{
         proceedCard();
-        flipped = true;
-        if(flipped==false){
-          // answer
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
-          // flipped=!flipped
-        }
-        if(flipped==true){
-          //question
+        // flipped = true;
+        // if(flipped==false){
+        //   // answer
+        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
+        //   // flipped=!flipped
+        // }
+        // if(flipped==true){
+        //   //question
           
           $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
           // flipped=!flipped;
-        }
+        // }
 
     });
-    $('.forwardCard').on('click', ()=>{
-        proceedCard();
-        flipped = true;
-        if(flipped==false){
-          // answer
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
-          // flipped=!flipped
-        }
-        if(flipped==true){
-          //question
-          
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
-          // flipped=!flipped;
-        }
-
-    });
-
     $('.backCard').on('click', ()=>{
         backACard();
-        flipped = true;
-        if(flipped==false){
-          // answer
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
-          // flipped=!flipped
-        }
+        // flipped = true;
+        // if(flipped==false){
+        //   // answer
+        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
+        //   // flipped=!flipped
+        // }
         if(flipped==true){
           //question
           

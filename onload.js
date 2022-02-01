@@ -17,7 +17,9 @@ window.onload = ()=>{
     // startupCSS();
 
     buttonListeners();
-    
+
+    $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h1>");
+
     deleteButtons();
     // saveIt();
 }
