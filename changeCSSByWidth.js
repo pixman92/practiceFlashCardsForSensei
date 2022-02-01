@@ -1,13 +1,13 @@
 window.addEventListener('resize', function(event){
     var newWidth = window.innerWidth;
     var newHeight = window.innerHeight; 
-    changeCSS();
+    changeCSSFunction();
 });
 
 //use this in Pair with: 
-changeCSS();
+// changeCSSFunction();
 
-function changeCSS(){
+function changeCSSFunction(){
     var widthMe = $('body').width();
     // console.log('widthMe', widthMe);
 
