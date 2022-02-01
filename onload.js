@@ -13,4 +13,5 @@ window.onload = ()=>{
     runClick();
     populate();
     buttonListeners();
+    saveIt();
 }

@@ -9,16 +9,27 @@ function buttonListeners(){
         myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
             if(index!=0)indexArray.push(index);
         });
+        debugger;
+
+        var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
+        if($('.question'+nextIndexFromLen).val()!='' && $('.answer'+nextIndexFromLen).val()!=""){
+            indexArray.push(nextIndexFromLen);
+        }
 
         debugger;
 
         indexArray.forEach((item, index)=>{
-            var question = $('.question'+index).val();
-            var answer = $('.answer'+index).val();
+            var question = $('.question'+item).val();
+            var answer = $('.answer'+item).val();
             debugger;
+            if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
+                myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
+                myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
+            }else{
+                addQuestionAddAnswerToPushFlashCards(question, answer);
+            }
 
-            myJSONFlashCards.JSONobj.innerArray[index][0][0][1] = question;
-            myJSONFlashCards.JSONobj.innerArray[index][0][1][1] = answer;
+            debugger;
 
         });
         populate();
