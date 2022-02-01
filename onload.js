@@ -3,9 +3,7 @@ window.onload = ()=>{
     show('study');
     
     makeInstanceFlashCards();
-    firstIndex('DaveKovar');
-    addQuestionAddAnswerToPushFlashCards('where to start?', 'whitebelt');
-    addQuestionAddAnswerToPushFlashCards('does x = this?' , 'nope');
+    firstIndex('karate');
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
   

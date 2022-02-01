@@ -14,32 +14,36 @@ function removeElement(indexSearch){
 // =============================
 function populate(){
     //pre function -> addQuestionAddAnswerToPushFlashCards(question, answer);
+    try{
 
-    htmlArray=[];
-    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
-        if(index!=0){
-            console.log('flashcardIndex', index);
-            addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
-            // debugger;
-        }
-    });
-    // debugger;
-
-    var htmlString = "";
-    htmlArray.forEach((item, index)=>{
-        htmlString += item;
-    });
-
-    indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
-
-    addBlankBox(indexOfBlank);    
-
-    // debugger;
-
-    $('.addBoxesHTMLHere').html('');
-    $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
-
-    // debugger;
+        htmlArray=[];
+        myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+            if(index!=0){
+                console.log('flashcardIndex', index);
+                addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
+                // debugger;
+            }
+        });
+        // debugger;
+    
+        var htmlString = "";
+        htmlArray.forEach((item, index)=>{
+            htmlString += item;
+        });
+    
+        indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
+    
+        addBlankBox(indexOfBlank);    
+    
+        // debugger;
+    
+        $('.addBoxesHTMLHere').html('');
+        $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
+    
+        // debugger;
+    }catch(err){
+        console.log('err: ', err);
+    } 
 
 }
 
