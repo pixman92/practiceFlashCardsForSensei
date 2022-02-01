@@ -99,3 +99,7 @@ grid-template-areas:
 .marginTop{
   margin-top:2em;
 }
+/* ============================= */
+.hidden{
+  display: none;
+}
