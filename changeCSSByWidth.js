@@ -11,10 +11,14 @@ function changeCSSFunction(){
     var widthMe = $('body').width();
     // console.log('widthMe', widthMe);
 
-    if(widthMe<=400){
+    if(widthMe<=800){
         console.log('you are small!');
         // debugger;
         changeCSS('editWidth', ['widthFull']);
-
+        
     }
+}
+
+function startupCSS(){
+    changeCSS('editingCards ', ['widthFull', 'center','hidden']);
 }

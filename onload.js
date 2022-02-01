@@ -12,7 +12,10 @@ window.onload = ()=>{
     
     runClick();
     retrieveIt();
+
     populate();
+    startupCSS();
+    
     buttonListeners();
     deleteButtons();
     // saveIt();
