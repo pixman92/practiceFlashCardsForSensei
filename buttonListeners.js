@@ -7,7 +7,7 @@ function buttonListeners(){
         var indexArray=[]
 
         if(myJSONFlashCards.JSONobj == undefined){
-            indexArray.push(1);
+            // indexArray.push(1);
 
             makeInstanceFlashCards();
             firstIndex('karate');
@@ -54,7 +54,7 @@ function buttonListeners(){
         var indexArray=[]
 
         if(myJSONFlashCards.JSONobj == undefined){
-            indexArray.push(1);
+            // indexArray.push(1);
 
             makeInstanceFlashCards();
             firstIndex('karate');
@@ -123,7 +123,7 @@ function buttonListeners(){
         // if(flipped==true){
         //   //question
           
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
+        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
           // flipped=!flipped;
         // }
 
@@ -136,12 +136,12 @@ function buttonListeners(){
         //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
         //   // flipped=!flipped
         // }
-        if(flipped==true){
+        // if(flipped==true){
           //question
           
-          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
+        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
           // flipped=!flipped;
-        }
+        // }
     });
 
 }

@@ -12,8 +12,8 @@ window.onload = ()=>{
         addBlankBox(1)
         $('.addBoxesHTMLHere').html(blankBoxHTML);
 
-        buttonListeners();
-        deleteButtons();
+        // buttonListeners();
+        // deleteButtons();
     }
 
     buttonListeners();
