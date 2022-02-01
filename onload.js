@@ -14,8 +14,8 @@ window.onload = ()=>{
     retrieveIt();
 
     populate();
-    startupCSS();
-    
+    // startupCSS();
+
     buttonListeners();
     deleteButtons();
     // saveIt();

@@ -20,5 +20,5 @@ function changeCSSFunction(){
 }
 
 function startupCSS(){
-    changeCSS('editingCards ', ['widthFull', 'center','hidden']);
+    changeCSS('editingCards ', ['widthFull', 'center']);
 }

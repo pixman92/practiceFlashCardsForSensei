@@ -46,7 +46,7 @@ function buttonListeners(){
         // debugger;
 
         var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
-        debugger;    //set to debug at this line
+        // debugger;    //set to debug at this line
         if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
             indexArray.push(nextIndexFromLen);
         }
