@@ -17,6 +17,7 @@ window.onload = ()=>{
     // startupCSS();
 
     buttonListeners();
+    
     deleteButtons();
     // saveIt();
 }
