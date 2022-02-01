@@ -4,18 +4,18 @@
 /*   gap: 10px 10px; */
   grid-auto-flow: row;
   grid-template-areas:
-    "back . forward"
+    "toEdit . forward"
     ". QADiv ."
     "noKnown . yesKnown";
 }
 
 .yesKnown { grid-area: yesKnown; }
-.back { grid-area: back; }
+.toEdit { grid-area: toEdit; }
 .forward { grid-area: forward; }
 .noKnown { grid-area: noKnown; }
 .QADiv { grid-area: QADiv; }
 
-.yesKnown, .back, .forward, .noKnown, .QADiv{
+.yesKnown, .toEdit, .forward, .noKnown, .QADiv{
   margin:auto;
 /*   width:50%; */
 }
