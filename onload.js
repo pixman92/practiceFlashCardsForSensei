@@ -4,6 +4,7 @@ window.onload = ()=>{
     
     makeInstanceFlashCards();
     firstIndex('karate');
+    addQuestionAddAnswerToPushFlashCards('', '');
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
   
@@ -16,8 +17,10 @@ window.onload = ()=>{
 
     buttonListeners();
 
-    $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h1>");
-
+    if(myJSONFlashCards.JSONobj != undefined){
+        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h1>");
+    }
+    
     deleteButtons();
     // saveIt();
 }

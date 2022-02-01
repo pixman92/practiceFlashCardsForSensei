@@ -6,32 +6,42 @@ function buttonListeners(){
 
         var indexArray=[]
 
-        myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
-            if(index!=0)indexArray.push(index);
-        });
-        // debugger;
+        if(myJSONFlashCards.JSONobj == undefined){
+            indexArray.push(1);
 
-        var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
-        if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
-            indexArray.push(nextIndexFromLen);
-        }
+            var question = $('.question'+1).val();
+            var answer = $('.answer'+1).val();
+            
+            addQuestionAddAnswerToPushFlashCards(question, answer);
 
-        // debugger;
-
-        indexArray.forEach((item, index)=>{
-            var question = $('.question'+item).val();
-            var answer = $('.answer'+item).val();
+        }else{
+            myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+                if(index!=0)indexArray.push(index);
+            });
             // debugger;
-            if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
-                myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
-                myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
-            }else{
-                addQuestionAddAnswerToPushFlashCards(question, answer);
+    
+            var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
+            // debugger;    //set to debug at this line
+            if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
+                indexArray.push(nextIndexFromLen);
             }
 
-            // debugger;
-
-        });
+            indexArray.forEach((item, index)=>{
+                var question = $('.question'+item).val();
+                var answer = $('.answer'+item).val();
+                // debugger;
+                if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
+                    myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
+                    myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
+                }else{
+                    addQuestionAddAnswerToPushFlashCards(question, answer);
+                    // debugger;    //set to debug at this line
+                }
+    
+                // debugger;
+            });
+    
+        }
         populate();
         saveIt();
         // debugger;       
@@ -40,34 +50,45 @@ function buttonListeners(){
     $('.saveButton').on('click', ()=>{
         var indexArray=[]
 
-        myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
-            if(index!=0)indexArray.push(index);
-        });
-        // debugger;
+        if(myJSONFlashCards.JSONobj == undefined){
+            indexArray.push(1);
 
-        var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
-        // debugger;    //set to debug at this line
-        if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
-            indexArray.push(nextIndexFromLen);
-        }
+            var question = $('.question'+1).val();
+            var answer = $('.answer'+1).val();
 
-        // debugger;
+            addQuestionAddAnswerToPushFlashCards(question, answer);
 
-        indexArray.forEach((item, index)=>{
-            var question = $('.question'+item).val();
-            var answer = $('.answer'+item).val();
+        }else{
+            myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+                if(index!=0)indexArray.push(index);
+            });
             // debugger;
-            if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
-                myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
-                myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
-            }else{
-                addQuestionAddAnswerToPushFlashCards(question, answer);
-                // debugger;    //set to debug at this line
+    
+            var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
+            // debugger;    //set to debug at this line
+            if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
+                indexArray.push(nextIndexFromLen);
             }
 
-            // debugger;
+            indexArray.forEach((item, index)=>{
+                var question = $('.question'+item).val();
+                var answer = $('.answer'+item).val();
+                // debugger;
+                if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
+                    myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
+                    myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
+                }else{
+                    addQuestionAddAnswerToPushFlashCards(question, answer);
+                    // debugger;    //set to debug at this line
+                }
+    
+                // debugger;
+    
+            });
+            
+        }
+        // debugger;
 
-        });
         populate();
         saveIt();
         // debugger;    //set to debug at this line
