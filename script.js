@@ -50,7 +50,7 @@
   // =============================
   var flipped=true;
   var cardPos=1;
-  function runClick(cardPos){
+  function runClick(){
     // flipped = false;
     // flipped=!flipped;
     // debugger;    //set to debug at this line
@@ -62,28 +62,37 @@
       flipped=!flipped
       if(flipped==false){
         // answer
-        debugger;    //set to debug at this line
-        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][1][1]+"</h1>");
+        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
         // flipped=!flipped
       }
       if(flipped==true){
         //question
-        debugger;    //set to debug at this line
-        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1]+"</h1>");
+        
+        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
         // flipped=!flipped;
       }
-      // flipped=!flipped;
-      // debugger;    //set to debug at this line
-      // runClick();
     });
   }
   function proceedCard(){
-    if(cardPos<myJSONFlashCards.JSONobj.innerArray.length){
+    if(cardPos<myJSONFlashCards.JSONobj.innerArray.length-1){
       cardPos+=1;
       console.log('cardPos', cardPos);
       // runClick();
     }else{
       cardPos=1;
+      console.log('cardPos', cardPos);
+      // runClick();
+    }
+
+  }
+
+  function backACard(){
+    if(cardPos>=2){
+      cardPos-=1;
+      console.log('cardPos', cardPos);
+      // runClick();
+    }else{
+      cardPos=myJSONFlashCards.JSONobj.innerArray.length-1;
       console.log('cardPos', cardPos);
       // runClick();
     }
