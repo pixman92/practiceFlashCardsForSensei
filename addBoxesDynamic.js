@@ -1,115 +1,52 @@
-var keepingTrackOfIndexJSON;
-function makeIndexJSON(){
-    keepingTrackOfIndexJSON = new JSON_Instance();
+// var keepingTrackOfIndexJSON;
+// function makeIndexJSON(){
+//     keepingTrackOfIndexJSON = new JSON_Instance();
 }   
 
 function removeElement(indexSearch){
-    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, indexGoingThrough)=>{
-        if(keepingTrackOfIndexJSON.JSONobj.innerArray[indexGoingThrough].index == indexSearch){
-            keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
-        }
-    });
-}
+    // keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, indexGoingThrough)=>{
+    //     if(keepingTrackOfIndexJSON.JSONobj.innerArray[indexGoingThrough].index == indexSearch){
+    //         keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
+    //     }
+    // });
 
-function pullLatest(){
-    makeIndexJSON();
-    resetIndex();
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
-    
-    return keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
-
-}
-var indexOfBlank;
-function creatingThroughFlashCards(){
-    htmlArray=[]
-    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
-        if(index!=0){
-            console.log('flashcardIndex', index);
-            keepingTrackOfIndexJSON.addToObj([['index', index]]);
-            addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
-        }
-    });
-    
-    var htmlString = "";
-    htmlArray.forEach((item, index)=>{
-        // console.log('htmlForEach', item);
-        htmlString += item;
-    });
-
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
-    indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
-    indexOfBlank++;
-    console.log('indexOfBlank', indexOfBlank);
-
-    addBlankBox(indexOfBlank);
-    $('.addBoxesHTMLHere').html('');
-    $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
-    // checkForBlank();
-
-}
-
-function checkForBlank(){
-    if($('.question'+indexOfBlank).val()=='' && $('.answer'+indexOfBlank).val()==''){
-        console.log('index', indexOfBlank);
-        console.log('blank!');
-    }else{
-        console.log('index', indexOfBlank);
-        console.log('not blank!');
-
-    }
-}
-
-
-var flashCardData=[];
-function resetIndex(){
-    // makeIndexJSON();
-    flashCardData=[];
-    htmlArray=[];
-    keepingTrackOfIndexJSON=new JSON_Instance();
-    
-
-    keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, index)=>{
-        console.log('keepingtrackIndex', item.index);
-        addQABox(item.index, flashCardData[index][0], flashCardData[index][1]);
-    });
-    var htmlString = "";
-    htmlArray.forEach((item, index)=>{
-        htmlString += item;
-    });
-
-    var len = keepingTrackOfIndexJSON.JSONobj.innerArray["length"];
-    var indexOfBlank = keepingTrackOfIndexJSON.JSONobj.innerArray[len-1].index;
-    indexOfBlank++;
-
-    addBlankBox(indexOfBlank);    
-
-    $('.addBoxesHTMLHere').html('');
-    $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
+    debugger;
+        // if(myJSONFlashCards.JSONobj.innerArray[indexGoingThrough]){
+            //         keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
+            //     }
+    myJSONFlashCards.JSONobj.innerArray.splice(indexSearch, 1);
+    debugger;
 }
 
 // =============================
 function populate(){
+    //pre function -> addQuestionAddAnswerToPushFlashCards(question, answer);
+
+    htmlArray=[];
     myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
         if(index!=0){
             console.log('flashcardIndex', index);
             addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
+            // debugger;
         }
     });
-    debugger;
+    // debugger;
 
     var htmlString = "";
     htmlArray.forEach((item, index)=>{
         htmlString += item;
     });
 
+    indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
+
     addBlankBox(indexOfBlank);    
 
-    debugger;
+    // debugger;
 
     $('.addBoxesHTMLHere').html('');
-    $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
+    $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);
 
-    debugger;
+    // debugger;
 
 }
 
