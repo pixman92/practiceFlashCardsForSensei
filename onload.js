@@ -11,7 +11,8 @@ window.onload = ()=>{
   
     
     runClick();
+    retrieveIt();
     populate();
     buttonListeners();
-    saveIt();
+    // saveIt();
 }

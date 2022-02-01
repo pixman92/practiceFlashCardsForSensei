@@ -9,19 +9,19 @@ function buttonListeners(){
         myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
             if(index!=0)indexArray.push(index);
         });
-        debugger;
+        // debugger;
 
         var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
         if($('.question'+nextIndexFromLen).val()!='' && $('.answer'+nextIndexFromLen).val()!=""){
             indexArray.push(nextIndexFromLen);
         }
 
-        debugger;
+        // debugger;
 
         indexArray.forEach((item, index)=>{
             var question = $('.question'+item).val();
             var answer = $('.answer'+item).val();
-            debugger;
+            // debugger;
             if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
                 myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
                 myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
@@ -29,30 +29,25 @@ function buttonListeners(){
                 addQuestionAddAnswerToPushFlashCards(question, answer);
             }
 
-            debugger;
+            // debugger;
 
         });
         populate();
-        debugger;
-
-
-        // if($('.question'+newIndex).val()!='' && $('.answer'+newIndex).val()!=''){
-        //     console.log('index', newIndex);
-        //     console.log('true');
-        //     addQuestionAddAnswerToPushFlashCards($('.question'+newIndex).val(), $('.answer'+newIndex).val());
-        //     resetIndex();
-        // }else{
-
-        // }
-
-            
-        //     resetIndex();
-        // }
-        // savedHTMLArray = [];
-        // savedHTML2 = [];
-        // savedHTMLArray[0] = $('.addBoxesHTMLHere').html();
-
-       
+        saveIt();
+        // debugger;       
     });
+
+    myJSONFlashCards.JSONobj.innerArray.forEach((item,index)=>{
+        // debugger;
+        if(index!=0){
+            $('.delete'+index).on('click', ()=>{
+                removeElement(index);
+                debugger;
+            });
+
+        }
+
+    });
+
            
 }
