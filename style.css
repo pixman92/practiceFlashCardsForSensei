@@ -103,3 +103,8 @@ grid-template-areas:
 .hidden{
   display: none;
 }
+
+.boxy{
+  height: 8em;
+  width: 8em;
+}

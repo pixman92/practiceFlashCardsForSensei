@@ -1,6 +1,6 @@
 window.onload = ()=>{
     hide();
-    show('editingCards');
+    show('study');
     
     makeInstanceFlashCards();
     firstIndex('DaveKovar');

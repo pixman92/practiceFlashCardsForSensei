@@ -48,14 +48,26 @@
   }
 
   // =============================
+  var flipped=false;
   function runClick(){
+    // flipped = false;
     $('.QADiv').on('click', ()=>{
       // debugger;    //set to debug at this line
 
       //first card
-      $('.QADiv').html("<h3>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h3>");
+      
+      if(flipped==true){
+        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
+        flipped=!flipped;
+      }else{
+        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][1][1]+"</h1>");
+        flipped=!flipped;
 
-
-      debugger;    //set to debug at this line
+      }
+      // runClick();
     });
+  }
+  var cardPos=1;
+  function proceedCard(){
+    runClick(cardPos++);
   }
