@@ -9,6 +9,9 @@ function buttonListeners(){
         if(myJSONFlashCards.JSONobj == undefined){
             indexArray.push(1);
 
+            makeInstanceFlashCards();
+            firstIndex('karate');
+
             var question = $('.question'+1).val();
             var answer = $('.answer'+1).val();
             
@@ -52,6 +55,9 @@ function buttonListeners(){
 
         if(myJSONFlashCards.JSONobj == undefined){
             indexArray.push(1);
+
+            makeInstanceFlashCards();
+            firstIndex('karate');
 
             var question = $('.question'+1).val();
             var answer = $('.answer'+1).val();
@@ -140,15 +146,20 @@ function buttonListeners(){
 
 }
 function deleteButtons(){
-    myJSONFlashCards.JSONobj.innerArray.forEach((item,index)=>{
-        // debugger;
-        if(index!=0){
-            $('.delete'+index).on('click', ()=>{
-                removeElement(index);
-                // debugger;
-            });
-    
-        }
-    
-    });
+    if(myJSONFlashCards.JSONobj == undefined){
+        $('.delete'+1).on('click', ()=>{
+            removeElement(1);
+            // debugger;
+        });        
+    }else{
+        myJSONFlashCards.JSONobj.innerArray.forEach((item,index)=>{
+            // debugger;
+            if(index!=0){
+                $('.delete'+index).on('click', ()=>{
+                    removeElement(index);
+                    // debugger;
+                });        
+            }        
+        });
+    }   
 }

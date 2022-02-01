@@ -74,7 +74,7 @@
     });
   }
   function proceedCard(){
-    if(cardPos<myJSONFlashCards.JSONobj.innerArray.length-1){
+    if(cardPos<myJSONFlashCards.JSONobj.innerArray.length){
       cardPos+=1;
       console.log('cardPos', cardPos);
       // runClick();

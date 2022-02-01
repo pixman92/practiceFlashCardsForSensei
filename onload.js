@@ -2,25 +2,33 @@ window.onload = ()=>{
     hide();
     show('study');
     
-    makeInstanceFlashCards();
-    firstIndex('karate');
-    addQuestionAddAnswerToPushFlashCards('', '');
+    
+    // addQuestionAddAnswerToPushFlashCards('', '');
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
-  
-    
-    runClick();
-    retrieveIt();
+    if(myJSONFlashCards==undefined){
+        makeInstanceFlashCards();
+        firstIndex('karate');
+        addBlankBox(1)
+        $('.addBoxesHTMLHere').html(blankBoxHTML);
 
-    populate();
-    // startupCSS();
+        buttonListeners();
+        deleteButtons();
+    }
 
     buttonListeners();
-
-    if(myJSONFlashCards.JSONobj != undefined){
-        $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h1>");
-    }
-    
     deleteButtons();
+    
+    runClick();
+    
+    populate();
+    retrieveIt();
+    // startupCSS();
+
+
+    // if(myJSONFlashCards.JSONobj != undefined){
+    //     $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[1][0][0][1]+"</h1>");
+    // }
+
     // saveIt();
 }

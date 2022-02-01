@@ -43,8 +43,7 @@ function populate(){
         // debugger;
     }catch(err){
         console.log('err: ', err);
-        addBlankBox(1)
-        $('.addBoxesHTMLHere').html(blankBoxHTML);
+        
     } 
 
 }
