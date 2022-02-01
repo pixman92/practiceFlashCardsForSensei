@@ -11,6 +11,6 @@ window.onload = ()=>{
   
     
     runClick();
-    makeIndexJSON();
+    populate();
     buttonListeners();
 }

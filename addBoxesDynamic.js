@@ -1,7 +1,7 @@
 // var keepingTrackOfIndexJSON;
 // function makeIndexJSON(){
 //     keepingTrackOfIndexJSON = new JSON_Instance();
-}   
+// }   
 
 function removeElement(indexSearch){
     // keepingTrackOfIndexJSON.JSONobj.innerArray.forEach((item, indexGoingThrough)=>{
@@ -9,13 +9,16 @@ function removeElement(indexSearch){
     //         keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
     //     }
     // });
-
-    debugger;
-        // if(myJSONFlashCards.JSONobj.innerArray[indexGoingThrough]){
-            //         keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
-            //     }
-    myJSONFlashCards.JSONobj.innerArray.splice(indexSearch, 1);
-    debugger;
+    if(indexSearch==0){
+        console.error('CANNOT remove element 0!');
+    }else{
+        debugger;
+            // if(myJSONFlashCards.JSONobj.innerArray[indexGoingThrough]){
+                //         keepingTrackOfIndexJSON.JSONobj.innerArray.splice(indexGoingThrough, 1);
+                //     }
+        myJSONFlashCards.JSONobj.innerArray.splice(indexSearch, 1);
+        debugger;
+    }
 }
 
 // =============================
