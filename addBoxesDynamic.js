@@ -55,6 +55,7 @@ function checkForBlank(){
     }else{
         console.log('index', indexOfBlank);
         console.log('not blank!');
+
     }
 }
 
@@ -84,6 +85,32 @@ function resetIndex(){
 
     $('.addBoxesHTMLHere').html('');
     $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
+}
+
+// =============================
+function populate(){
+    myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
+        if(index!=0){
+            console.log('flashcardIndex', index);
+            addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
+        }
+    });
+    debugger;
+
+    var htmlString = "";
+    htmlArray.forEach((item, index)=>{
+        htmlString += item;
+    });
+
+    addBlankBox(indexOfBlank);    
+
+    debugger;
+
+    $('.addBoxesHTMLHere').html('');
+    $('.addBoxesHTMLHere').html(htmlSring + blankBoxHTML);
+
+    debugger;
+
 }
 
 var htmlArray=[];
