@@ -6,26 +6,29 @@ window.onload = ()=>{
     // addQuestionAddAnswerToPushFlashCards('', '');
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
-    if(myJSONFlashCards==undefined){
+    makeInstanceFlashCards();
+    if(myJSONFlashCards.JSONobj.innerArray==undefined){
         // debugger;    //set to debug at this line
-        makeInstanceFlashCards();
         firstIndex('karate');
         addBlankBox(1)
         $('.addBoxesHTMLHere').html(blankBoxHTML);
-
+        
         buttonListeners();
         deleteButtons();
-
+        // runClick();
+        
         // debugger;    //set to debug at this line
     }else{
+        // runClick();
+        retrieveIt();
+        runClick();
         buttonListeners();
         deleteButtons();
         
-        runClick();
         
         // retrieveIt();
         // populate();
-        debugger;    //set to debug at this line
+        // debugger;    //set to debug at this line
     }
     // startupCSS();
 

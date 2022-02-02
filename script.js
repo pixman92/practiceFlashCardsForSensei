@@ -77,10 +77,12 @@
     if(cardPos<myJSONFlashCards.JSONobj.innerArray.length){
       cardPos+=1;
       console.log('cardPos', cardPos);
+      // debugger;    //set to debug at this line
       // runClick();
     }else{
       cardPos=1;
       console.log('cardPos', cardPos);
+      // debugger;    //set to debug at this line
       // runClick();
     }
 
@@ -90,10 +92,12 @@
     if(cardPos>=2){
       cardPos-=1;
       console.log('cardPos', cardPos);
+      // debugger;    //set to debug at this line
       // runClick();
     }else{
       cardPos=myJSONFlashCards.JSONobj.innerArray.length-1;
       console.log('cardPos', cardPos);
+      // debugger;    //set to debug at this line
       // runClick();
     }
 
