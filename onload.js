@@ -7,6 +7,7 @@ window.onload = ()=>{
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
     if(myJSONFlashCards==undefined){
+        debugger;    //set to debug at this line
         makeInstanceFlashCards();
         firstIndex('karate');
         addBlankBox(1)
@@ -14,6 +15,8 @@ window.onload = ()=>{
 
         // buttonListeners();
         // deleteButtons();
+
+        debugger;    //set to debug at this line
     }
 
     buttonListeners();
