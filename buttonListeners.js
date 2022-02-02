@@ -142,7 +142,7 @@ function buttonListeners(){
         // if(flipped==true){
         //   //question
           
-        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
+          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
           // flipped=!flipped;
         // }
 
@@ -158,7 +158,7 @@ function buttonListeners(){
         // if(flipped==true){
           //question
           
-        //   $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
+          $('.QADiv').html("<h1>"+myJSONFlashCards.JSONobj.innerArray[cardPos][0][0][1]+"</h1>");
           // flipped=!flipped;
         // }
     });

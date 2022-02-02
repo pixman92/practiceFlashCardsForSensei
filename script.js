@@ -48,7 +48,7 @@
   }
 
   // =============================
-  var flipped=true;
+  var flipped=false;
   var cardPos=1;
   function runClick(){
     // flipped = false;
@@ -85,6 +85,8 @@
       // debugger;    //set to debug at this line
       // runClick();
     }
+    // flipped=true;
+    // runClick();
 
   }
 
@@ -100,5 +102,7 @@
       // debugger;    //set to debug at this line
       // runClick();
     }
+    // flipped=true;
+    // runClick();
 
   }
