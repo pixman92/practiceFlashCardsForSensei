@@ -23,10 +23,10 @@ function buttonListeners(){
             myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
                 if(index!=0)indexArray.push(index);
             });
-            debugger;
+            // debugger;
     
             var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
-            debugger;    //set to debug at this line
+            // debugger;    //set to debug at this line
             if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
                 indexArray.push(nextIndexFromLen);
             }
@@ -34,23 +34,25 @@ function buttonListeners(){
             indexArray.forEach((item, index)=>{
                 var question = $('.question'+item).val();
                 var answer = $('.answer'+item).val();
-                debugger;
+                // debugger;
                 if(question!=undefined || answer!=undefined){
+                    //here we add the Question and Answer data - if not undefined
                     if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
                         myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
                         myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
                     }else{
                         addQuestionAddAnswerToPushFlashCards(question, answer);
-                        debugger;    //set to debug at this line
+                        // debugger;    //set to debug at this line
                     }
                 }
     
-                debugger;
+                // debugger;
             });
     
         }
         populate();
         saveIt();
+        deleteButtons();
         // debugger;       
     });
 
@@ -69,7 +71,7 @@ function buttonListeners(){
             var question = $('.question'+1).val();
             var answer = $('.answer'+1).val();
 
-            debugger;    //set to debug at this line
+            // debugger;    //set to debug at this line
 
             addQuestionAddAnswerToPushFlashCards(question, answer);
 
@@ -77,10 +79,10 @@ function buttonListeners(){
             myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
                 if(index!=0)indexArray.push(index);
             });
-            debugger;
+            // debugger;
     
             var nextIndexFromLen = myJSONFlashCards.JSONobj.innerArray.length;
-            debugger;    //set to debug at this line
+            // debugger;    //set to debug at this line
             if($('.question'+nextIndexFromLen).val()!='' || $('.answer'+nextIndexFromLen).val()!=""){
                 indexArray.push(nextIndexFromLen);
             }
@@ -88,26 +90,28 @@ function buttonListeners(){
             indexArray.forEach((item, index)=>{
                 var question = $('.question'+item).val();
                 var answer = $('.answer'+item).val();
-                debugger;
+                // debugger;
                 if(question!=undefined || answer!=undefined){
+                    //here we add the Question and Answer data - if not undefined
                     if(myJSONFlashCards.JSONobj.innerArray[item]!=undefined){
                         myJSONFlashCards.JSONobj.innerArray[item][0][0][1] = question;
                         myJSONFlashCards.JSONobj.innerArray[item][0][1][1] = answer;
                     }else{
                         addQuestionAddAnswerToPushFlashCards(question, answer);
-                        debugger;    //set to debug at this line
+                        // debugger;    //set to debug at this line
                     }
                 }
     
-                debugger;
+                // debugger;
     
             });
             
         }
-        debugger;
+        // debugger;
 
         populate();
         saveIt();
+        deleteButtons();
         // debugger;    //set to debug at this line
     });
     
@@ -117,9 +121,13 @@ function buttonListeners(){
     });
     
     $('.toEdit').on('click', ()=>{
+        //all things that need to be DONE - when switching to Edit page
         hide();
         show('editWidth');
         show('editingCards');
+        retrieveIt();
+        populate();
+        deleteButtons();
     });
 
     // =============================
@@ -160,15 +168,15 @@ function deleteButtons(){
     if(myJSONFlashCards.JSONobj == undefined){
         $('.delete'+1).on('click', ()=>{
             removeElement(1);
-            debugger;
+            // debugger;
         });        
     }else{
         myJSONFlashCards.JSONobj.innerArray.forEach((item,index)=>{
-            debugger;
+            // debugger;
             if(index!=0){
                 $('.delete'+index).on('click', ()=>{
                     removeElement(index);
-                    debugger;
+                    // debugger;
                 });        
             }        
         });
