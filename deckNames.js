@@ -11,20 +11,31 @@ function addToDeckNames(name){
     if(deckNameJSON.JSONobj.innerArray.length==0){
         deckNameJSON.addToObj([[[0], ['deckName', name]]]);
     }else{
-        deckNameJSON.JSONobj.innerArray.forEach((item, index)=>{
-            // debugger;    //set to debug at this line
-            // if(item[0][1]!=name && index>=deckNameJSON.JSONobj.innerArray.length){
-            if(item[0][1]==name){
-                debugger;    //set to debug at this line
-                console.log('Already a Name!');
-            }else if(index==deckNameJSON.JSONobj.innerArray.length){
-                console.log('still within index');
-            }else{
+        // deckNameJSON.JSONobj.innerArray.forEach((item, index)=>{
+        //     // debugger;    //set to debug at this line
+        //     // if(item[0][1]!=name && index>=deckNameJSON.JSONobj.innerArray.length){
+        //     if(item[0][1]==name){
+        //         debugger;    //set to debug at this line
+        //         console.log('Already a Name!');
+        //     }else if(index==deckNameJSON.JSONobj.innerArray.length){
+        //         console.log('still within index');
+        //     }else{
+        //         debugger;    //set to debug at this line
+        //         deckNameJSON.addToObj([[[0], ['deckName', name]]]);
+        //     }
+        //     // debugger;    //set to debug at this line
+        // });
+        // var variableLength = deckNameJSON.JSONobj.innerArray.length;
+        for(var i=0; i<deckNameJSON.JSONobj.innerArray.length; i++){
+            debugger;    //set to debug at this line
+            if(deckNameJSON.JSONobj.innerArray[i][0][1]!=name && i==deckNameJSON.JSONobj.innerArray.length){
                 debugger;    //set to debug at this line
                 deckNameJSON.addToObj([[[0], ['deckName', name]]]);
+                // variableLength++;
+            }else{
+                console.log('Already Named!');
             }
-            // debugger;    //set to debug at this line
-        });
+        }
     }
         // debugger;    //set to debug at this line
 }
