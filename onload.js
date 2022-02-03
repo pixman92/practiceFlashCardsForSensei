@@ -7,6 +7,7 @@ window.onload = ()=>{
     
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
     makeInstanceFlashCards();
+    initializeDeckNameJSON();
     if(myJSONFlashCards.JSONobj.innerArray==undefined){
         // debugger;    //set to debug at this line
         firstIndex('karate');
