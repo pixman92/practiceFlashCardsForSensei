@@ -8,8 +8,19 @@ function addToDeckNames(name){
     // retrieveDeckNameArray();
 
     // debugger;    //set to debug at this line
-    deckNameJSON.addToObj([[[0], ['deckName', name]]]);
-    // debugger;    //set to debug at this line
+    if(deckNameJSON.JSONobj.innerArray.length==0){
+        deckNameJSON.addToObj([[[0], ['deckName', name]]]);
+    }else{
+        deckNameJSON.JSONobj.innerArray.forEach((item, index)=>{
+            debugger;    //set to debug at this line
+            if(item[0][1]!=name && index<=deckNameJSON.JSONobj.innerArray.length){
+                deckNameJSON.addToObj([[[0], ['deckName', name]]]);
+            }else{
+                console.log('Already a Name!');
+            }
+        });
+    }
+        // debugger;    //set to debug at this line
 }
 
 function removeDeckName(name){
@@ -17,7 +28,8 @@ function removeDeckName(name){
         console.log(item[0][1])
         // pulledNamesArray.push(item[0][1]);
         if(item[0][1] == name){
-            deckNameJSON.JSONobj.innerArray.slice(index, 1);
+            debugger;    //set to debug at this line
+            deckNameJSON.JSONobj.innerArray.splice(index, 1);
         }
     });
 }
