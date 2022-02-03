@@ -27,14 +27,14 @@ function addToDeckNames(name){
         // });
         // var variableLength = deckNameJSON.JSONobj.innerArray.length;
         for(var i=0; i<deckNameJSON.JSONobj.innerArray.length; i++){
-            debugger;    //set to debug at this line
-            if(deckNameJSON.JSONobj.innerArray[i][0][1]!=name && i==deckNameJSON.JSONobj.innerArray.length){
+            // debugger;    //set to debug at this line
+            if(deckNameJSON.JSONobj.innerArray[i][0][1]==name){
+                console.log('Already Named!');
+            }else if(deckNameJSON.JSONobj.innerArray[i][0][1]!=name && i==deckNameJSON.JSONobj.innerArray.length-1){
                 debugger;    //set to debug at this line
                 deckNameJSON.addToObj([[[0], ['deckName', name]]]);
                 // variableLength++;
-            }else{
-                console.log('Already Named!');
-            }
+            }   
         }
     }
         // debugger;    //set to debug at this line
