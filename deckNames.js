@@ -13,11 +13,13 @@ function addToDeckNames(name){
     }else{
         deckNameJSON.JSONobj.innerArray.forEach((item, index)=>{
             debugger;    //set to debug at this line
-            if(item[0][1]!=name && index<=deckNameJSON.JSONobj.innerArray.length){
-                deckNameJSON.addToObj([[[0], ['deckName', name]]]);
-            }else{
+            // if(item[0][1]!=name && index>=deckNameJSON.JSONobj.innerArray.length){
+            if(item[0][1]==name  && index<=deckNameJSON.JSONobj.innerArray.length){
                 console.log('Already a Name!');
+            }else{
+                deckNameJSON.addToObj([[[0], ['deckName', name]]]);
             }
+            debugger;    //set to debug at this line
         });
     }
         // debugger;    //set to debug at this line
