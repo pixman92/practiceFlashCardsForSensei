@@ -1,12 +1,13 @@
 .deckStyling {  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10% 35% 30%;
+    grid-template-rows: 35% 35%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "deckNameClass deckNameClass studyClass"
       "deckNameClass deckNameClass editClass"
       "tagsClass tagsClass sharedEmailsAndUID";
+    background-color: lightblue;
   }
   
   .deckNameClass { grid-area: deckNameClass; }
@@ -14,17 +15,18 @@
   
   .sharedEmailsAndUID {  display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0x;
+    grid-template-rows: 90% 40%;
+    gap: 0;
     grid-auto-flow: row;
     grid-template-areas:
       "sharedEmailsClass"
       "UIDClass";
     grid-area: sharedEmailsAndUID;
+    background-color: white;
   }
   
-  .sharedEmailsClass { grid-area: sharedEmailsClass; margin-bottom:1em; }
-  .UIDClass { grid-area: UIDClass; margin-top: 1em;}
+  .sharedEmailsClass { grid-area: sharedEmailsClass; }
+  .UIDClass { grid-area: UIDClass;}
   
   .studyClass { grid-area: studyClass; }
   .editClass { grid-area: editClass; }
