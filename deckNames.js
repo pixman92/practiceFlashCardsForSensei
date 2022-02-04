@@ -71,11 +71,11 @@ function saveDeckNames(){
     deckNameJSON.saveToLocalStorage('deckNamesArray');
 }
 
-function addAnotherDeck(){
+function addAnotherDeck(index, deckName, tags, edit){
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
-    '                          <div class="deckNameClass paddy">SCK</div>',
+    '                          <div class="deckNameClass paddy">'+deckName+'</div>',
     '                          <div class="studyClass centerVertically">',
     '                              <button class="studyButton">Study</button>',
     '                          </div>',
@@ -93,7 +93,7 @@ function addAnotherDeck(){
     '                          </div>',
     '                      </div>',
     '                  </div>',
-    '                  <div class="deleteClass centerVertically"><button class="deckDelete1">X</button></div>',
+    '                  <div class="deleteClass centerVertically"><button class="deckDelete"'+index+'>X</button></div>',
     '               </div>',
     ].join('');
 
