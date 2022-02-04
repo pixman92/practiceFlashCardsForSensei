@@ -131,10 +131,22 @@ grid-template-areas:
   padding-left: 1em;
 }
 
-.borderGrey{
-  border: solid 1px grey;
+.borderGreyAndRight{
+  border-bottom: solid 1px grey;
+  border-right: solid 1px grey;
+
 }
+
+.borderGreyAndLeft{
+  border-bottom: solid 1px grey;
+  border-left: solid 1px grey;
+
+}
+
 
 .borderBlue{
   border: solid 1px blue;
+}
+.paddingBottom{
+  padding-bottom: 3em;
 }
