@@ -33,6 +33,11 @@
   width:50%;
   text-align: center;
 }
+.centerVertically{
+  	display: flex;
+  	justify-content: left;
+  	align-items: center;
+}
 /* ================= */
 
 .editingTop{
