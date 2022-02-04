@@ -28,6 +28,11 @@
 .center2{
   margin: auto;
 }
+.center3{
+  margin: auto;
+  width:50%;
+  text-align: center;
+}
 /* ================= */
 
 .editingTop{
