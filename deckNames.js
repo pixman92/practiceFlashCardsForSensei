@@ -58,7 +58,7 @@ function removeDeckName(name){
 
 // =============================
 var pulledNamesArray = [];
-function retrieveDeckNameArray(){
+function extractDeckNameArray(){
     
     deckNameJSON.JSONobj.innerArray.forEach((item, index)=>{
         console.log(item[0][1])
@@ -67,26 +67,36 @@ function retrieveDeckNameArray(){
 }
 
 // =============================
-// function saveDeckNames(){
-//     deckNameJSON.
-// }
+function saveDeckNames(){
+    deckNameJSON.saveToLocalStorage('deckNamesArray');
+}
 
 function addAnotherDeck(){
-    var tmpArray = ['<div class="w3-container">',
-    '               <div class="deckStyling borderBlue widthFull center wayMarginTop">',
-    '               <div class="deckNameClass paddy">SCK</div>',
-    '               <div class="studyClass centerVertically"><button class="studyButton">Study</button></div>',
-    '               <div class="editClass centerVertically"><button class="editButton">Edit</button></div>',
-    '               <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense</div>',
-    '               <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">',
-    '                  <div class="sharedEmailsClass center2"><button>Shared With</button></div>',
-    '                  <div class="UIDClass center2"><button>UID</button></div>',
+    var tmpArray = ['<div class="decksAndDeletes">',
+    '                  <div class="w3-container medMarginTop ">',
+    '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
+    '                          <div class="deckNameClass paddy">SCK</div>',
+    '                          <div class="studyClass centerVertically">',
+    '                              <button class="studyButton">Study</button>',
+    '                          </div>',
+    '                          <div class="editClass centerVertically">',
+    '                              <button class="editButton">Edit</button>',
+    '                          </div>',
+    '                          <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense</div>',
+    '                          <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">',
+    '                              <div class="sharedEmailsClass center2">',
+    '                                  <button>Shared With</button>',
+    '                              </div>',
+    '                              <div class="UIDClass center2">',
+    '                                  <button>UID</button>',
+    '                              </div>',
+    '                          </div>',
+    '                      </div>',
+    '                  </div>',
+    '                  <div class="deleteClass centerVertically"><button class="deckDelete1">X</button></div>',
     '               </div>',
-    '               </div>',
-    '               </div>',
-    '            </div>',
-    '         </div>',
     ].join('');
+
     $('.decksHTML').html($('.decksHTML').html() + tmpArray)
 }
 

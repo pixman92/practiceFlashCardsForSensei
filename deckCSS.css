@@ -31,3 +31,18 @@
   .studyClass { grid-area: studyClass; }
   .editClass { grid-area: editClass; }
   
+  /* ============================= */
+
+  .decksAndDeletes {  display: grid;
+    grid-template-columns: 85% 10%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "deckClass deleteClass";
+  }
+  
+  .deckClass { grid-area: deckClass; }
+  
+  .deleteClass { grid-area: deleteClass;  }
+  
