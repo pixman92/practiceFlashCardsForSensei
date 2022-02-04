@@ -73,7 +73,7 @@ function saveDeckNames(){
 
 function addAnotherDeck(index, deckName, tags){
     var tmpArray = ['<div class="decksAndDeletes">',
-    '                  <div class="w3-container medMarginTop ">',
+    '                  <div class="w3-container medMarginTop widthFull ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
     '                          <div class="deckNameClass paddy">'+deckName+'</div>',
     '                          <div class="studyClass centerVertically">',
@@ -97,13 +97,23 @@ function addAnotherDeck(index, deckName, tags){
     '               </div>',
     ]
     // .join('');
+    var unjoined = tmpArray;
+    tmpArray = tmpArray.join('');
+
+    copy(tmpArray);
 
     $('.decksHTML').html($('.decksHTML').html() + tmpArray);
-    return tmpArray;
+    return unjoined;
 }
 
 // =============================
+function loopingThroughDeckNames(){
+    debugger;    //set to debug at this line
+    
+}
 
+
+//=============================
 function printDeckNameArray(){
     deckNameJSON.print();
 }
