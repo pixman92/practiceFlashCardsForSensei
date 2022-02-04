@@ -1,6 +1,6 @@
 var deckNameJSON;
 
-function initializeDeckNameJSON(){
+function initializeDeckNameJSON(){          //initialized in onload.js
     deckNameJSON = new JSON_Instance();
 }
 
@@ -66,6 +66,31 @@ function retrieveDeckNameArray(){
     });
 }
 
+// =============================
+// function saveDeckNames(){
+//     deckNameJSON.
+// }
+
+function addAnotherDeck(){
+    var tmpArray = ['<div class="w3-container">',
+    '               <div class="deckStyling borderBlue widthFull center wayMarginTop">',
+    '               <div class="deckNameClass paddy">SCK</div>',
+    '               <div class="studyClass centerVertically"><button class="studyButton">Study</button></div>',
+    '               <div class="editClass centerVertically"><button class="editButton">Edit</button></div>',
+    '               <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense</div>',
+    '               <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">',
+    '                  <div class="sharedEmailsClass center2"><button>Shared With</button></div>',
+    '                  <div class="UIDClass center2"><button>UID</button></div>',
+    '               </div>',
+    '               </div>',
+    '               </div>',
+    '            </div>',
+    '         </div>',
+    ].join('');
+    $('.decksHTML').html($('.decksHTML').html() + tmpArray)
+}
+
+// =============================
 
 function printDeckNameArray(){
     deckNameJSON.print();
