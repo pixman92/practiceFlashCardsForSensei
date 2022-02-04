@@ -1,6 +1,6 @@
 window.onload = ()=>{
     hide();
-    show('study');
+    show('decks');
     
     
     // addQuestionAddAnswerToPushFlashCards('', '');
