@@ -71,33 +71,35 @@ function saveDeckNames(){
     deckNameJSON.saveToLocalStorage('deckNamesArray');
 }
 
-function addAnotherDeck(index, deckName, tags, edit){
+function addAnotherDeck(index, deckName, tags){
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
     '                          <div class="deckNameClass paddy">'+deckName+'</div>',
     '                          <div class="studyClass centerVertically">',
-    '                              <button class="studyButton">Study</button>',
+    '                              <button class="studyButton'+index+'">Study</button>',
     '                          </div>',
     '                          <div class="editClass centerVertically">',
-    '                              <button class="editButton">Edit</button>',
+    '                              <button class="editButton'+index+'">Edit</button>',
     '                          </div>',
-    '                          <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense</div>',
+    '                          <div class="tagsClass w3-white borderGreyAndLeft paddy">'+tags.toString()+'</div>',
     '                          <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">',
     '                              <div class="sharedEmailsClass center2">',
-    '                                  <button>Shared With</button>',
+    '                                  <button class="sharedEmailButton'+index+'">Shared With</button>',
     '                              </div>',
     '                              <div class="UIDClass center2">',
-    '                                  <button>UID</button>',
+    '                                  <button class="UIDButton'+index+'">UID</button>',
     '                              </div>',
     '                          </div>',
     '                      </div>',
     '                  </div>',
-    '                  <div class="deleteClass centerVertically"><button class="deckDelete"'+index+'>X</button></div>',
+    '                  <div class="deleteClass centerVertically"><button class="deckDelete'+index+'">X</button></div>',
     '               </div>',
-    ].join('');
+    ]
+    // .join('');
 
-    $('.decksHTML').html($('.decksHTML').html() + tmpArray)
+    $('.decksHTML').html($('.decksHTML').html() + tmpArray);
+    return tmpArray;
 }
 
 // =============================
