@@ -130,3 +130,11 @@ grid-template-areas:
   padding-top: 1em;
   padding-left: 1em;
 }
+
+.borderGrey{
+  border: solid 1px grey;
+}
+
+.borderBlue{
+  border: solid 1px blue;
+}
