@@ -27,6 +27,8 @@
   function firstIndex(deckTitle){
       myJSONFlashCards.addMoreToIndex(0, [[[0], [['emailOwner', 'sam@gmail.com'],['deckTitle', deckTitle], ['sharedWithEmails', '-1'], ['deckScore', '0'], ['UID', uuidv4()]]]]);
 
+      addToDeckNames(deckTitle);
+
       // addToDeckNames(deckTitle);
   }
   
@@ -47,12 +49,17 @@ function uuidv4() {
   // =================
   function saveIt(){
     //save to local storage
-    myJSONFlashCards.saveToLocalStorage()
+    myJSONFlashCards.saveToLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1]);     //save the Deck
+    //save the namesArray JSON String
+    deckNameJSON.saveToLocalStorage('deckNamesJSON');
   
   }
   function retrieveIt(){
     //retrieve from local storage
-    myJSONFlashCards.getFromLocalStorage("saveMeFlash", true) 
+    myJSONFlashCards.getFromLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1], true) 
+
+    deckNameJSON.getFromLocalStorage('deckNameJSON', true);
+
   }
 
   // =============================
@@ -119,11 +126,12 @@ function uuidv4() {
   function makeNewDeck(deckName){
     debugger;    //set to debug at this line
     makeInstanceFlashCards();
-    debugger;    //set to debug at this line
     firstIndex(deckName);
-
+    
     addQuestionAddAnswerToPushFlashCards('time?', 'noon');
     addQuestionAddAnswerToPushFlashCards('place?', 'home');
     addQuestionAddAnswerToPushFlashCards('age?', '16');
-
+    
+    saveIt();
+    debugger;    //set to debug at this line
   }

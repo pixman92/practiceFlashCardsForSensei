@@ -1,3 +1,5 @@
+//file that deals with saving and creating Decks
+// to and from LocalStorage
 var deckNameJSON;
 
 function initializeDeckNameJSON(){          //initialized in onload.js
@@ -67,9 +69,9 @@ function extractDeckNameArray(){
 }
 
 // =============================
-function saveDeckNames(){
-    deckNameJSON.saveToLocalStorage('deckNamesArray');
-}
+// function saveDeckNames(){
+//     deckNameJSON.saveToLocalStorage('deckNamesArray');
+// }
 
 function addAnotherDeck(index, deckName, tags){
     var tmpArray = ['<div class="decksAndDeletes">',
