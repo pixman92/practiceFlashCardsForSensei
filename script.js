@@ -25,7 +25,7 @@
   }
   // =================
   function firstIndex(deckTitle){
-      myJSONFlashCards.addMoreToIndex(0, [[[0], [['emailOwner', 'sam@gmail.com'],['deckTitle', deckTitle], ['sharedWithEmails', '-1'], ['deckScore', '0'], ['UID', 'cb9effe3-7b4f-4b7a-84bf-c766c30f116']]]]);
+      myJSONFlashCards.addMoreToIndex(0, [[[0], [['emailOwner', 'sam@gmail.com'],['deckTitle', deckTitle], ['sharedWithEmails', '-1'], ['deckScore', '0'], ['UID', uuidv4()]]]]);
 
       // addToDeckNames(deckTitle);
   }
@@ -35,7 +35,13 @@
       myJSONFlashCards.print();
   
   }
-  
+// =============================  
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
   
   
   // =================

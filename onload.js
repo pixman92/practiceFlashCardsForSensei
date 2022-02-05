@@ -8,8 +8,9 @@ window.onload = ()=>{
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
     makeInstanceFlashCards();
     initializeDeckNameJSON();
-    if(myJSONFlashCards.JSONobj.innerArray==undefined){
-        // debugger;    //set to debug at this line
+    if(myJSONFlashCards.JSONobj.innerArray==undefined || myJSONFlashCards.JSONobj == null
+        ){
+        debugger;    //set to debug at this line
         firstIndex('karate');
         addBlankBox(1)
         $('.addBoxesHTMLHere').html(blankBoxHTML);
@@ -18,14 +19,14 @@ window.onload = ()=>{
         deleteButtons();
         // runClick();
         
-        // debugger;    //set to debug at this line
+        debugger;    //set to debug at this line
     }else{
         // runClick();
         retrieveIt();
         runClick();
         buttonListeners();
         deleteButtons();
-        
+        debugger;    //set to debug at this line
         
         // retrieveIt();
         // populate();

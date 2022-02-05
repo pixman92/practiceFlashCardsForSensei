@@ -110,7 +110,7 @@ function addAnotherDeck(index, deckName, tags){
 function loopingThroughDeckNames(){
     debugger;    //set to debug at this line
     myJSONFlashCards.print();
-    var deckName = 
+    // var deckName = 
 
 }
 
