@@ -54,10 +54,7 @@ function uuidv4() {
   
   function retrieveIt(){
     //retrieve from local storage
-    myJSONFlashCards.getFromLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1], true) 
-
-    deckNamesJSON.getFromLocalStorage('deckNamesJSON', true);
-
+    myJSONFlashCards.getFromLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1], true);
   }
 
   function saveDeckNames(){
@@ -66,7 +63,7 @@ function uuidv4() {
   }
 
   function retrieveDeckNames(){
-    deckNamesJSON.getFromLocalStorage('deckNameJSON');
+    deckNamesJSON.getFromLocalStorage('deckNamesJSON', true);
   }
   
 

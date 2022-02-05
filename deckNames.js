@@ -33,10 +33,10 @@ function addToDeckNames(name){
         for(var i=0; i<deckNamesJSON.JSONobj.innerArray.length; i++){
             // debugger;    //set to debug at this line
             if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]!=name && i==deckNamesJSON.JSONobj.innerArray.length-1){
-                debugger;    //set to debug at this line
+                // debugger;    //set to debug at this line
                 deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
                 // variableLength++;
-            }else if(deckNamesJSON.JSONobj.innerArray[i][0][1]==name){
+            }else if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]==name){
                 alreadyThereBool = true
             }
         }
@@ -45,9 +45,9 @@ function addToDeckNames(name){
         console.log('Already Named!');
         alreadyThereBool=false;        
     }
-    debugger;    //set to debug at this line
+    // debugger;    //set to debug at this line
     saveDeckNames();
-    debugger;    //set to debug at this line
+    // debugger;    //set to debug at this line
 }
 
 function removeDeckName(name){
