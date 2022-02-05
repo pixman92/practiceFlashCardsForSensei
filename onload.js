@@ -8,8 +8,8 @@ window.onload = ()=>{
     // myJSONFlashCards.saveToLocalStorage('saveMeFlash');
     makeInstanceFlashCards();
     initializeDeckNameJSON();
-    if(myJSONFlashCards.JSONobj.innerArray==undefined || myJSONFlashCards.JSONobj == null
-        ){
+    // debugger;    //set to debug at this line
+    if(myJSONFlashCards.JSONobj == null || myJSONFlashCards.JSONobj.innerArray.length==0){
         debugger;    //set to debug at this line
         firstIndex('karate');
         addBlankBox(1)

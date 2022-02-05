@@ -47,7 +47,7 @@ function uuidv4() {
   // =================
   function saveIt(){
     //save to local storage
-    myJSONFlashCards.saveToLocalStorage("saveMeFlash")
+    myJSONFlashCards.saveToLocalStorage()
   
   }
   function retrieveIt(){
@@ -112,5 +112,18 @@ function uuidv4() {
     }
     // flipped=true;
     // runClick();
+
+  }
+
+  // =============================
+  function makeNewDeck(deckName){
+    debugger;    //set to debug at this line
+    makeInstanceFlashCards();
+    debugger;    //set to debug at this line
+    firstIndex(deckName);
+
+    addQuestionAddAnswerToPushFlashCards('time?', 'noon');
+    addQuestionAddAnswerToPushFlashCards('place?', 'home');
+    addQuestionAddAnswerToPushFlashCards('age?', '16');
 
   }
