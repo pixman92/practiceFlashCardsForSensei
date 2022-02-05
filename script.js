@@ -52,10 +52,6 @@ function uuidv4() {
     myJSONFlashCards.saveToLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1]);     //save the Deck
   }
   
-  function saveDeckNames(){
-    //save the namesArray JSON String
-    deckNamesJSON.saveToLocalStorage('deckNamesJSON');
-  }
   function retrieveIt(){
     //retrieve from local storage
     myJSONFlashCards.getFromLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1], true) 
@@ -63,6 +59,16 @@ function uuidv4() {
     deckNamesJSON.getFromLocalStorage('deckNamesJSON', true);
 
   }
+
+  function saveDeckNames(){
+    //save the namesArray JSON String
+    deckNamesJSON.saveToLocalStorage('deckNamesJSON');
+  }
+
+  function retrieveDeckNames(){
+    deckNamesJSON.getFromLocalStorage('deckNameJSON');
+  }
+  
 
   // =============================
   var flipped=false;
@@ -134,6 +140,6 @@ function uuidv4() {
     addQuestionAddAnswerToPushFlashCards('place?', 'home');
     addQuestionAddAnswerToPushFlashCards('age?', '16');
     
-    saveIt();
+    saveDeckNames();
     debugger;    //set to debug at this line
   }
