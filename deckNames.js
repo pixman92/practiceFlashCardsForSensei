@@ -10,13 +10,13 @@ function addToDeckNames(name){
     // retrieveDeckNameArray();
     retrieveDeckNames();
 
-    var alreadyThereBool = false;
-    // debugger;    //set to debug at this line
+    var alreadyThereBool = false;           // is the deck already named? this BOOL keeps track!
+    debugger;    //set to debug at this line
     if(deckNamesJSON.JSONobj.innerArray.length==0){
         deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
     }else{
         // deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
-        //     // debugger;    //set to debug at this line
+            // debugger;    //set to debug at this line
         //     // if(item[0][1]!=name && index>=deckNamesJSON.JSONobj.innerArray.length){
         //     if(item[0][1]==name){
         //         debugger;    //set to debug at this line
@@ -31,13 +31,14 @@ function addToDeckNames(name){
         // });
         // var variableLength = deckNamesJSON.JSONobj.innerArray.length;
         for(var i=0; i<deckNamesJSON.JSONobj.innerArray.length; i++){
-            // debugger;    //set to debug at this line
-            if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]!=name && i==deckNamesJSON.JSONobj.innerArray.length-1){
-                // debugger;    //set to debug at this line
+            debugger;    //set to debug at this line
+            if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]!=name && i==deckNamesJSON.JSONobj.innerArray.length){
+                debugger;    //set to debug at this line
                 deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
                 // variableLength++;
             }else if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]==name){
                 alreadyThereBool = true
+                debugger;    //set to debug at this line
             }
         }
     }
@@ -45,9 +46,9 @@ function addToDeckNames(name){
         console.log('Already Named!');
         alreadyThereBool=false;        
     }
-    // debugger;    //set to debug at this line
+    debugger;    //set to debug at this line
     saveDeckNames();
-    // debugger;    //set to debug at this line
+    debugger;    //set to debug at this line
 }
 
 function removeDeckName(name){
@@ -67,6 +68,7 @@ var pulledNamesArray = [];
 function extractDeckNameArray(){
     
     deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
+        debugger;    //set to debug at this line
         console.log(item[0][1])
         pulledNamesArray.push(item[0][1]);
     });
@@ -77,7 +79,7 @@ function extractDeckNameArray(){
 //     deckNamesJSON.saveToLocalStorage('deckNamesArray');
 // }
 
-function addAnotherDeck(index, deckName, tags){
+function addAnotherDeckToHTML(index, deckName, tags){
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop widthFull ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
@@ -119,7 +121,7 @@ function loopingThroughDeckNames(){
     debugger;    //set to debug at this line
     myJSONFlashCards.print();
     deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
-        addAnotherDeck()
+        addAnotherDeckToHTML()
     });
     // var deckName = 
 

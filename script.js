@@ -57,6 +57,7 @@ function uuidv4() {
     myJSONFlashCards.getFromLocalStorage(myJSONFlashCards.JSONobj.innerArray[0][0][1][1], true);
   }
 
+  // these 2 functions save and pull deckNames - from localStorage
   function saveDeckNames(){
     //save the namesArray JSON String
     deckNamesJSON.saveToLocalStorage('deckNamesJSON');
@@ -129,7 +130,7 @@ function uuidv4() {
 
   // =============================
   function makeNewDeck(deckName){
-    debugger;    //set to debug at this line
+    // debugger;    //set to debug at this line
     makeInstanceFlashCards();
     firstIndex(deckName);
     
@@ -138,5 +139,5 @@ function uuidv4() {
     addQuestionAddAnswerToPushFlashCards('age?', '16');
     
     saveDeckNames();
-    debugger;    //set to debug at this line
+    // debugger;    //set to debug at this line
   }

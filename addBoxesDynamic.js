@@ -13,6 +13,10 @@ function removeElement(indexSearch){
 
 // =============================
 function populate(){
+    // function that makes the QA boxes
+    // from an array of Stored QA elements
+
+
     //pre function -> addQuestionAddAnswerToPushFlashCards(question, answer);
     try{
 
@@ -50,7 +54,7 @@ function populate(){
 
 var htmlArray=[];
 function addQABox(index, question, answer){
-
+    // function designed to make the QA boxes
     if(!index){
         console.log('UNDEFINED! Try again');
     }else{
@@ -98,6 +102,7 @@ function addQABox(index, question, answer){
 }
 var blankBoxHTML;
 function addBlankBox(newIndex){
+    //function and variable to make into a new Blank Box for QA
     blankBoxHTML = [
         '   <div class="marginTop addBoxesHTMLHere">','<div class="boxesAndDelete">',
         '   <!--  boxData/addingData/addbutton',

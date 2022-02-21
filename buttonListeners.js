@@ -165,6 +165,9 @@ function buttonListeners(){
 
 }
 function deleteButtons(){
+    // function to create and initialized Delete Buttons
+    // to 'else' them, if 1 already exists
+
     if(myJSONFlashCards.JSONobj == undefined){
         $('.delete'+1).on('click', ()=>{
             removeElement(1);
