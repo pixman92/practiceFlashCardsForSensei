@@ -11,9 +11,9 @@ function addToDeckNames(name){
     retrieveDeckNames();
 
     var alreadyThereBool = false;           // is the deck already named? this BOOL keeps track!
-    debugger;    //set to debug at this line
     if(deckNamesJSON.JSONobj.innerArray.length==0){
         deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
+        debugger;    //set to debug at this line
     }else{
         // deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
             // debugger;    //set to debug at this line
@@ -30,21 +30,34 @@ function addToDeckNames(name){
         //     // debugger;    //set to debug at this line
         // });
         // var variableLength = deckNamesJSON.JSONobj.innerArray.length;
+        // for(var i=0; i<deckNamesJSON.JSONobj.innerArray.length; i++){
+        //     debugger;    //set to debug at this line
+        //     if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]!=name && i==deckNamesJSON.JSONobj.innerArray.length){
+        //         debugger;    //set to debug at this line
+        //         deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
+        //         // variableLength++;
+        //     }else if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]==name){
+        //         alreadyThereBool = true
+        //         debugger;    //set to debug at this line
+        //     }
+        // }
+
         for(var i=0; i<deckNamesJSON.JSONobj.innerArray.length; i++){
             debugger;    //set to debug at this line
-            if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]!=name && i==deckNamesJSON.JSONobj.innerArray.length){
-                debugger;    //set to debug at this line
-                deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
-                // variableLength++;
-            }else if(deckNamesJSON.JSONobj.innerArray[0][0][0][1]==name){
-                alreadyThereBool = true
+            if(deckNamesJSON.JSONobj.innerArray[i][0][0][1]==name){
+                alreadyThereBool = true;
                 debugger;    //set to debug at this line
             }
-        }
+          }
     }
     if(alreadyThereBool==true){
         console.log('Already Named!');
         alreadyThereBool=false;        
+        debugger;    //set to debug at this line
+    }else{
+        console.log('NEW Deck Name');
+        deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
+        debugger;    //set to debug at this line
     }
     debugger;    //set to debug at this line
     saveDeckNames();
