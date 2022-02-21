@@ -11,11 +11,17 @@ function addToDeckNames(name){
     retrieveDeckNames();
 
     var alreadyThereBool = false;           // is the deck already named? this BOOL keeps track!
-    if(deckNamesJSON.JSONobj.innerArray.length==0){
-        deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
-        debugger;    //set to debug at this line
-    }else{
-        // deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
+    try{
+        // if(deckNamesJSON.JSONobj.innerArray == null || deckNamesJSON.JSONobj.innerArray == undefined){
+        // if(deckNamesJSON.JSONobj.innerArray == null || deckNamesJSON.JSONobj.innerArray == undefined){
+            deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
+            debugger;    //set to debug at this line    
+        // }
+    }catch(err){
+        console.error('ERR ', err);
+    }
+    if(deckNamesJSON.JSONobj.innerArray >= 1){
+               // deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
             // debugger;    //set to debug at this line
         //     // if(item[0][1]!=name && index>=deckNamesJSON.JSONobj.innerArray.length){
         //     if(item[0][1]==name){
