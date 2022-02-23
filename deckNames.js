@@ -133,11 +133,16 @@ function loopingThroughDeckNames(){
         var tmpJSON = new JSON_Instance();
         var tmpString = localStorage.getItem(tmpName);
 
+        debugger;    //set to debug at this line
+        
         tmpJSON.insertJSON(tmpString);
         tmpJSON.parseMe();
 
+        debugger;    //set to debug at this line
 
-        addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], )
+        var tags = tmpJSON.JSONobj.innerArray[index][0][5][0][1]
+        debugger;    //set to debug at this line
+        addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], tags)
     });
     // var deckName = 
 

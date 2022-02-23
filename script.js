@@ -31,6 +31,11 @@
 
       // addToDeckNames(deckTitle);
   }
+
+  function addTags(tagsArray){
+    myJSONFlashCards.JSONobj.innerArray[0][0].push([['tags', tagsArray]])
+
+  }
   
   function addQuestionAddAnswerToPushFlashCards(question, answer){
       myJSONFlashCards.addToObj([[[0], [['question', question], ['answer', answer], ['score', -1]]]])
