@@ -3,12 +3,22 @@
 var deckNamesJSON;
 
 function initializeDeckNamesJSON(){          //initialized in onload.js
-    deckNamesJSON = new JSON_Instance();
+    
+    if(deckNamesJSON.getFromLocalStorage('deckNamesJSON')==undefined){
+        deckNamesJSON = new JSON_Instance();
+    }else{
+        try{
+            retrieveDeckNames();
+        }catch(err){
+            console.log('err ', err);
+        }
+    }
+    
 }
 
 function addToDeckNames(name){
     // retrieveDeckNameArray();
-    retrieveDeckNames();
+
 
     var alreadyThereBool = false;           // is the deck already named? this BOOL keeps track!
     try{

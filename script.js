@@ -27,7 +27,7 @@
   function firstIndex(deckTitle){
       myJSONFlashCards.addMoreToIndex(0, [[[0], [['emailOwner', 'sam@gmail.com'],['deckTitle', deckTitle], ['sharedWithEmails', '-1'], ['deckScore', '0'], ['UID', uuidv4()]]]]);
 
-      addToDeckNames(deckTitle);
+      // addToDeckNames(deckTitle);
 
       // addToDeckNames(deckTitle);
   }
