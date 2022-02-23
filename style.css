@@ -153,3 +153,21 @@ grid-template-areas:
 .paddingBottom{
   padding-bottom: 3em;
 }
+
+/* ============================= */
+/* Main Deck - html page */
+
+.topDeck { 
+  margin-top: .8em;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "leftClass HeaderTitleClass AddButtonClass";
+}
+
+.leftClass { grid-area: leftClass; }
+.HeaderTitleClass { grid-area: HeaderTitleClass; }
+.AddButtonClass { grid-area: AddButtonClass; }

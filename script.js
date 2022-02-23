@@ -63,9 +63,10 @@ function uuidv4() {
     deckNamesJSON.saveToLocalStorage('deckNamesJSON');
   }
 
-  function retrieveDeckNames(){
-    deckNamesJSON.getFromLocalStorage('deckNamesJSON', true);
-  }
+  // this function is depreciated - compared to the initializeDeckNamesJSON() function in deckNames.js
+  // function retrieveDeckNames(){
+  //   deckNamesJSON.getFromLocalStorage('deckNamesJSON', true);
+  // }
   
 
   // =============================

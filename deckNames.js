@@ -28,12 +28,14 @@ function addToDeckNames(name){
     try{
         // if(deckNamesJSON.JSONobj.innerArray == null || deckNamesJSON.JSONobj.innerArray == undefined){
         if(deckNamesJSON.JSONobj.innerArray == null || deckNamesJSON.JSONobj.innerArray == undefined){
+            // adding Deck Name to array
             deckNamesJSON.addToObj([[[0], [['deckName', name]]]]);
             // debugger;    //set to debug at this line    
         }
         for(var i=0; i<deckNamesJSON.JSONobj.innerArray.length; i++){
             // debugger;    //set to debug at this line
             if(deckNamesJSON.JSONobj.innerArray[i][0][0][1]==name){
+                // making sure each name is unique
                 alreadyThereBool = true;
                 // debugger;    //set to debug at this line
             }
