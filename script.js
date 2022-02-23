@@ -33,7 +33,8 @@
   }
 
   function addTags(tagsArray){
-    myJSONFlashCards.JSONobj.innerArray[0][0].push([['tags', tagsArray]])
+    myJSONFlashCards.JSONobj.innerArray[0][0][5] = [['tags'], tagsArray];
+    // myJSONFlashCards.JSONobj.innerArray[0][0].push([['tags', tagsArray]])
 
   }
   

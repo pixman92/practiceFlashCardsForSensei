@@ -140,7 +140,7 @@ function loopingThroughDeckNames(){
 
         debugger;    //set to debug at this line
 
-        var tags = tmpJSON.JSONobj.innerArray[index][0][5][0][1]
+        var tags = tmpJSON.JSONobj.innerArray[index][0][5][1]
         debugger;    //set to debug at this line
         addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], tags)
     });
