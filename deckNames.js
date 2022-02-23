@@ -4,16 +4,20 @@ var deckNamesJSON;
 
 function initializeDeckNamesJSON(){          //initialized in onload.js
     
-    if(deckNamesJSON.getFromLocalStorage('deckNamesJSON')==undefined){
+    if(localStorage.getItem('deckNamesJSON') == undefined){
+        // if no old String found in localStorage, 
+        // make new JSON! & initialize it!
         deckNamesJSON = new JSON_Instance();
+        console.log('JSON Decks - initialized!');
     }else{
-        try{
-            retrieveDeckNames();
-        }catch(err){
-            console.log('err ', err);
-        }
-    }
-    
+        // OR
+        // make new JSON
+        // and pull old localStorage - push to initiated JSON and parse into Array
+        deckNamesJSON = new JSON_Instance();
+        deckNamesJSON.insertJSON(localStorage.getItem('deckNamesJSON'));
+        deckNamesJSON.parseMe();
+        console.log('Old String - reinitialized');
+    }  
 }
 
 function addToDeckNames(name){

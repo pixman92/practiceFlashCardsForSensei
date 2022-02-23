@@ -11,4 +11,7 @@ console.log(uuidv4());
 
 =============================
 
-TODO - 
+What still doesn't work?
+- DECK add button
+- deck - study button
+- deck - edit button
