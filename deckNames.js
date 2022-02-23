@@ -128,7 +128,16 @@ function loopingThroughDeckNames(){
     debugger;    //set to debug at this line
     myJSONFlashCards.print();
     deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
-        addAnotherDeckToHTML()
+        debugger;    //set to debug at this line
+        var tmpName = deckNamesJSON.JSONobj.innerArray[index][0][0][1];
+        var tmpJSON = new JSON_Instance();
+        var tmpString = localStorage.getItem(tmpName);
+
+        tmpJSON.insertJSON(tmpString);
+        tmpJSON.parseMe();
+
+
+        addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], )
     });
     // var deckName = 
 
