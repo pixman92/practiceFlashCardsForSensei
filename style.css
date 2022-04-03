@@ -33,12 +33,21 @@
   width:50%;
   text-align: center;
 }
+.center4{
+  display: flex;
+  justify-content: center;
+}
+
 .centerVertically{
   	display: flex;
   	justify-content: center;
   	align-items: center;
 }
 /* ================= */
+
+.editingCards {
+  margin-top: 3em;
+}
 
 .editingTop{
   /* grid for top of editing page */
@@ -104,6 +113,10 @@ grid-template-areas:
 }
 .right{
   right:0;
+}
+
+.widthBig{
+  width: max-content;
 }
 
 .marginTop{

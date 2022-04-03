@@ -1,126 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sensei FlasCards</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensei FlasCards</title>
 
-        <link rel="stylesheet" href="style.css">
-        <link
-        rel="stylesheet" href="deckCSS.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="deckCSS.css">
 
-        <!-- JSON_Instance -->
-        <!-- <script src="https://raw.githack.com/pixman92/JSON_Instance/main/JSON_Instance.js"></script> -->
+    <!-- JSON_Instance -->
+    <!-- <script src="https://raw.githack.com/pixman92/JSON_Instance/main/JSON_Instance.js"></script> -->
 
-        <script src="https://rawcdn.githack.com/pixman92/JSON_Instance/fb3f630734c9e9bf8ce2d19ec0a3fd4d5fde8e2e/JSON_Instance.js"></script>
+    <script
+        src="https://rawcdn.githack.com/pixman92/JSON_Instance/fb3f630734c9e9bf8ce2d19ec0a3fd4d5fde8e2e/JSON_Instance.js"></script>
 
-        <!-- Cash -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.0/cash.min.js"></script>
-        <!-- CSS Change -->
-        <script src="https://raw.githack.com/pixman92/CSS_Strip/main/changeCSS.js"></script>
-        <!-- W3 CSS library -->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Cash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.0/cash.min.js"></script>
+    <!-- CSS Change -->
+    <script src="https://raw.githack.com/pixman92/CSS_Strip/main/changeCSS.js"></script>
+    <!-- W3 CSS library -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-         <!-- debug through HTML -->
-         <script src="https://raw.githack.com/pixman92/DebugThroughHTML/main/mainHTMLDebug.js"></script>
+    <!-- debug through HTML -->
+    <script src="https://raw.githack.com/pixman92/DebugThroughHTML/main/mainHTMLDebug.js"></script>
 
 
-         <script src="addBoxesDynamic.js"></script>
-         <script src="buttonListeners.js"></script>
-         <script src="changeCSSByWidth.js"></script>
-        <script src="onload.js" defer></script>
-        <script src="deckNames.js"></script>
-        <script src="script.js"></script>
+    <script src="addBoxesDynamic.js"></script>
+    <script src="buttonListeners.js"></script>
+    <script src="changeCSSByWidth.js"></script>
+    <script src="onload.js" defer></script>
+    <script src="deckNames.js"></script>
+    <script src="script.js"></script>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- decks page -->
-        <div class="decks widthFull center">
-            <!-- <div class="headerText center3">My FlashCards Dashboard</div> -->
-            <div class="topDeck">
-                <div class="leftClass"></div>
-                <div class="HeaderTitleClass center">My FlashCards Dashboard</div>
-                <div class="AddButtonClass"><button class="addButton">Add</button></div>
-              </div>
+    <!-- decks page -->
+    <div class="decks widthFull center">
+        <!-- <div class="headerText center3">My FlashCards Dashboard</div> -->
+        <div class="topDeck">
+            <div class="leftClass"></div>
+            <div class="HeaderTitleClass center">My FlashCards Dashboard</div>
+            <div class="AddButtonClass"><button class="addButton">Add</button></div>
+        </div>
 
-            <div class="decksHTML">
-               <div class="decksAndDeletes">
-                  <div class="w3-container medMarginTop">
-                      <div class="deckStyling borderBlue widthFull center wayMarginTop">
-                          <div class="deckNameClass paddy">SCK</div>
-                          <div class="studyClass centerVertically">
-                              <button class="studyButton">Study</button>
-                          </div>
-                          <div class="editClass centerVertically">
-                              <button class="editButton">Edit</button>
-                          </div>
-                          <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense</div>
-                          <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">
-                              <div class="sharedEmailsClass center2">
-                                  <button>Shared With</button>
-                              </div>
-                              <div class="UIDClass center2">
-                                  <button>UID</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="deleteClass centerVertically"><button class="deckDelete1">X</button></div>
-               </div>
+        <div class="decksHTML">
+            <div class="decksAndDeletes">
+                <div class="w3-container medMarginTop">
+                    <div class="deckStyling borderBlue widthFull center wayMarginTop">
+                        <div class="deckNameClass paddy">SCK</div>
+                        <div class="studyClass centerVertically">
+                            <button class="studyButton">Study</button>
+                        </div>
+                        <div class="editClass centerVertically">
+                            <button class="editButton">Edit</button>
+                        </div>
+                        <div class="tagsClass w3-white borderGreyAndLeft paddy">karate, awesomeness, peace, selfDefense
+                        </div>
+                        <div class="sharedEmailsAndUID borderGreyAndRight paddingBottom w3-white">
+                            <div class="sharedEmailsClass center2">
+                                <button>Shared With</button>
+                            </div>
+                            <div class="UIDClass center2">
+                                <button>UID</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deleteClass centerVertically"><button class="deckDelete1">X</button></div>
             </div>
         </div>
-    </body>
-</html></div></div><!-- study page --><div class="study widthFull center"><div class="studyDiv widthFull">
-<div class="yesKnown">
-    <button>Yes</button>
-</div>
-<div class="toEdit">
-    <button>To Edit</button>
-</div>
-<div class="forward">
-    <button class="backCard">Back</button>
-    <button class="forwardCard">forward</button>
-</div>
-<div class="noKnown">
-    <button>No</button>
-</div>
-<div class="QADiv center2 boxy">
-    <div class="">
-        <h1>QA</h1>
     </div>
-</div></div></div><!-- editing page --><div class="editWidth widthFull editWidth"><div
-class="editingCards widthFull center">
-<!-- the buttons on top of the Edit page -->
-<div class="editingTop widthFull">
-    <div class="backButtonClass left">
-        <button class="backButtonFromEdit">Back</button>
-    </div>
-    <div class="nameClass center2">
-        <div class="deckName center2">Karate Flash Cards</div>
-    </div>
-    <div class="saveButtonClass right">
-        <button class="saveButton">Save</button>
-    </div>
+</body>
+
+</html>
 </div>
+</div><!-- study page -->
+<div class="study widthFull center">
+    <div class="studyDiv widthFull">
+        <div class="yesKnown">
+            <button>Yes</button>
+        </div>
+        <div class="toEdit">
+            <button>To Edit</button>
+        </div>
+        <div class="forward">
+            <button class="backCard">Back</button>
+            <button class="forwardCard">forward</button>
+        </div>
+        <div class="noKnown">
+            <button>No</button>
+        </div>
+        <div class="QADiv center2 boxy">
+            <div class="">
+                <h1>QA</h1>
+            </div>
+        </div>
+    </div>
+</div><!-- editing page -->
+<div class="editWidth widthBig center4">
+    <div class="editingCards">
+        <!-- the buttons on top of the Edit page -->
+        <div class="editingTop widthFull">
+            <div class="backButtonClass left">
+                <button class="backButtonFromEdit">Back</button>
+            </div>
+            <div class="nameClass center2">
+                <div class="deckName center2">Karate Flash Cards</div>
+            </div>
+            <div class="saveButtonClass right">
+                <button class="saveButton">Save</button>
+            </div>
+        </div>
 
 
-<!-- boxAdd Grid - 2 columns/3 rows -->
+        <!-- boxAdd Grid - 2 columns/3 rows -->
 
-<!-- boxes to REHTML - starts here -->
-<div class="marginTop addBoxesHTMLHere"></div>
+        <!-- boxes to REHTML - starts here -->
+        <div class="marginTop addBoxesHTMLHere"></div>
 
-<!-- boxes to REHTML - ends here -->
+        <!-- boxes to REHTML - ends here -->
 
-<div class="addingData cardFlexColumn center"></div>
-<div class="addButton">
-    <div class="">
-        <button class="addingButton">+</button>
+        <div class="addingData cardFlexColumn center"></div>
+        <div class="addButton">
+            <div class="">
+                <button class="addingButton">+</button>
+            </div>
+        </div>
     </div>
-</div></div></div><!--   </div> --><!-- div class="questionDiv">
+</div><!--   </div> -->
+<!-- div class="questionDiv">
           <textarea class='question1'>ahasdfsdf</textarea>>
           <div class="answerDiv">
           <textarea class='answer1'>ahasdfsdf</textarea>
@@ -129,4 +141,9 @@ class="editingCards widthFull center">
           <button>X</button>
           </div>
           
-          </div> --><!--   </div> --></div></body></html>
+          </div> -->
+<!--   </div> -->
+</div>
+</body>
+
+</html>
