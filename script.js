@@ -38,6 +38,7 @@
   }
 
   function addTags(tagsArray){
+    // TODO - make tags editable, with a HTML DOM attribute name
     myJSONFlashCards.JSONobj.innerArray[0][0][5] = [['tags'], tagsArray];
     // myJSONFlashCards.JSONobj.innerArray[0][0].push([['tags', tagsArray]])
 
@@ -84,6 +85,11 @@ function uuidv4() {
   var flipped=false;
   var cardPos=1;
   function runClick(){
+    //flip & non-flip crap, it works, don't touch it
+
+    // flips a card over and over, (hopefully correctly)
+
+
     // flipped = false;
     // flipped=!flipped;
     // debugger;    //set to debug at this line
@@ -107,6 +113,7 @@ function uuidv4() {
     });
   }
   function proceedCard(){
+    // goes FORWARD one card
     if(cardPos<myJSONFlashCards.JSONobj.innerArray.length){
       cardPos+=1;
       console.log('cardPos', cardPos);
@@ -124,6 +131,7 @@ function uuidv4() {
   }
 
   function backACard(){
+    // goes BACK one card
     if(cardPos>=2){
       cardPos-=1;
       console.log('cardPos', cardPos);
@@ -142,6 +150,9 @@ function uuidv4() {
 
   // =============================
   function makeNewDeck(deckName){
+
+    // 
+
     // debugger;    //set to debug at this line
     makeInstanceFlashCards();
     firstIndex(deckName);

@@ -16,7 +16,15 @@
       "creation_time": "2022-04-03T06:19:44.176Z",
       "id": "2",
       "references": [],
-      "title": "CSSing the Flash CardBox"
+      "title": "CSSing the Flash CardBox",
+      "description": {
+        "content": "document.getElementsByClassName('changeMe')[0].setAttribute(\"contenteditable\", \"true\");\n",
+        "mime": "text/markdown"
+      },
+      "details": {
+        "content": "document.getElementsByClassName('changeMe')[0].setAttribute(\"contenteditable\", \"true\");\n",
+        "mime": "text/markdown"
+      }
     },
     {
       "assignedTo": {
@@ -37,7 +45,31 @@
       "title": "Reset Deck's Score %"
     }
   ],
-  "in-progress": [],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T06:32:40.551Z",
+      "id": "5",
+      "references": [],
+      "title": "Projects JSON"
+    }
+  ],
   "testing": [],
-  "done": []
+  "done": [
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T06:35:39.536Z",
+      "description": {
+        "content": "makeInstanceFlashCards();\nfirstIndex(deckName);\naddQuestionAddAnswerToPushFlashCards('time?', 'noon');\n\ndeckNames - is a JSON\nsaveDeckNames() - saves it\n\n\ninitializeDeckNamesJSON() - pulls the data back, and inits the JSON ",
+        "mime": "text/markdown"
+      },
+      "id": "6",
+      "references": [],
+      "title": "What I've learned"
+    }
+  ]
 }
