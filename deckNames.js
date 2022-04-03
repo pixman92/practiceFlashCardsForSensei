@@ -3,6 +3,7 @@
 var deckNamesJSON;
 
 function initializeDeckNamesJSON(){          //initialized in onload.js
+    // this will pull the JSON data from localStorage, and reinitialize it
     
     if(localStorage.getItem('deckNamesJSON') == undefined){
         // if no old String found in localStorage, 
@@ -44,6 +45,7 @@ function addToDeckNames(name){
         console.error('ERR ', err);
     }
 
+    // code that makes sure that the Name is NOT already taken
     if(alreadyThereBool==true){
         console.log('Already Named!');
         alreadyThereBool=false;        
@@ -59,6 +61,7 @@ function addToDeckNames(name){
 }
 
 function removeDeckName(name){
+    // is the given 'name' parameter, already in the List??
     deckNamesJSON.JSONobj.innerArray.forEach((item, index)=>{
         console.log(item[0][1])
         // pulledNamesArray.push(item[0][1]);
@@ -87,6 +90,7 @@ function extractDeckNameArray(){
 // }
 
 function addAnotherDeckToHTML(index, deckName, tags){
+    // add HTML for another Deck
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop widthFull ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
@@ -123,6 +127,8 @@ function addAnotherDeckToHTML(index, deckName, tags){
 
 // =============================
 function loopingThroughDeckNames(){
+    // 
+
     // initializeDeckNamesJSON();
     retrieveIt();
     debugger;    //set to debug at this line
