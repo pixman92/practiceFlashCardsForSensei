@@ -24,12 +24,14 @@ function populate(){
         myJSONFlashCards.JSONobj.innerArray.forEach((item, index)=>{
             if(index!=0){
                 console.log('flashcardIndex', index);
+                // sends Data to the addQABox() function - to create a new QA flash Card box
                 addQABox(index, myJSONFlashCards.JSONobj.innerArray[index][0][0][1], myJSONFlashCards.JSONobj.innerArray[index][0][1][1]);
                 // debugger;
             }
         });
         // debugger;
     
+        // this code parses the HTML array, pushes all to a Single String
         var htmlString = "";
         htmlArray.forEach((item, index)=>{
             htmlString += item;
@@ -37,6 +39,7 @@ function populate(){
     
         indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
     
+        // adds a Blank Box
         addBlankBox(indexOfBlank);    
     
         // debugger;

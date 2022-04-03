@@ -4,6 +4,8 @@
 // TODO - make functions to Correct CSS 
 // for small(er) screens
 
+// this FILE is not yet used
+
 window.addEventListener('resize', function(event){
     var newWidth = window.innerWidth;
     var newHeight = window.innerHeight; 

@@ -126,7 +126,7 @@ function addAnotherDeckToHTML(index, deckName, tags){
 }
 
 // =============================
-function loopingThroughDeckNames(){
+function pullDeckNamesFromLocalStorage(){
     // 
 
     // initializeDeckNamesJSON();

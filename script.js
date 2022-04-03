@@ -25,10 +25,15 @@
   }
   // =================
   function firstIndex(deckTitle){
+      // creates the 0th index, of Meta Data
+
+      // email owner 
+      // Deck Title
+      // who has this Deck been shared with
+      // deck Score - % of correct, overall, option
+      // UID - unique Identifier ID, to help with "same name Decks", though this should not be a problem
       myJSONFlashCards.addMoreToIndex(0, [[[0], [['emailOwner', 'sam@gmail.com'],['deckTitle', deckTitle], ['sharedWithEmails', '-1'], ['deckScore', '0'], ['UID', uuidv4()]]]]);
-
-      // addToDeckNames(deckTitle);
-
+      
       // addToDeckNames(deckTitle);
   }
 

@@ -4,10 +4,37 @@
       "assignedTo": {
         "name": "TheArborist"
       },
+      "creation_time": "2022-04-03T06:19:51.272Z",
+      "id": "3",
+      "references": [],
+      "title": "Chrome Extension"
+    },
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T06:19:44.176Z",
+      "id": "2",
+      "references": [],
+      "title": "CSSing the Flash CardBox"
+    },
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
       "creation_time": "2022-04-03T06:10:57.324Z",
       "id": "1",
       "references": [],
       "title": "Get the JSON variables synced up correctly"
+    },
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T06:26:47.833Z",
+      "id": "4",
+      "references": [],
+      "title": "Reset Deck's Score %"
     }
   ],
   "in-progress": [],
