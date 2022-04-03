@@ -173,9 +173,13 @@ function buttonListeners(){
 }
 function deckNamesHomeButtonsWithIndex(index){
     // Decks Home - button addEventListeners
-    $('.'+studyButton+index).on('click', ()=>{
+    $('.studyButton'+index).on('click', ()=>{
         hide();
-        
+        show('study');
+    });
+    $('.editButton'+index).on('click', ()=>{
+        hide();
+        show('editingCards');
     });
 }
 

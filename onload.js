@@ -18,7 +18,8 @@ window.onload = ()=>{
         buttonListeners();
         deleteButtons();
         
-        addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], tags)
+        // addAnotherDeckToHTML(1, deckNamesJSON.JSONobj.innerArray[index][0][0][1], tags)
+        addAnotherDeckToHTML(1, "SCK", "nope")
 
         // runClick();
         
