@@ -16,7 +16,7 @@
       "creation_time": "2022-04-03T06:19:44.176Z",
       "id": "2",
       "references": [],
-      "title": "CSSing the Flash CardBox",
+      "title": "Editable DIVs",
       "description": {
         "content": "document.getElementsByClassName('changeMe')[0].setAttribute(\"contenteditable\", \"true\");\n",
         "mime": "text/markdown"
@@ -43,6 +43,15 @@
       "id": "4",
       "references": [],
       "title": "Reset Deck's Score %"
+    },
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T07:07:12.743Z",
+      "id": "9",
+      "references": [],
+      "title": "Buttons, 'back to deck' for both Pages"
     }
   ],
   "in-progress": [
@@ -54,15 +63,6 @@
       "id": "5",
       "references": [],
       "title": "Projects JSON"
-    },
-    {
-      "assignedTo": {
-        "name": "TheArborist"
-      },
-      "creation_time": "2022-04-03T06:48:51.114Z",
-      "id": "8",
-      "references": [],
-      "title": "CSS - lower QA Editing - header"
     }
   ],
   "testing": [
@@ -77,6 +77,15 @@
     }
   ],
   "done": [
+    {
+      "assignedTo": {
+        "name": "TheArborist"
+      },
+      "creation_time": "2022-04-03T06:48:51.114Z",
+      "id": "8",
+      "references": [],
+      "title": "CSS - lower QA Editing - header"
+    },
     {
       "assignedTo": {
         "name": "TheArborist"

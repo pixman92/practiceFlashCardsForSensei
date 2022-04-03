@@ -120,7 +120,7 @@ function buttonListeners(){
         show('study');
     });
     
-    $('.toEdit').on('click', ()=>{
+    $('.toDecks').on('click', ()=>{
         //all things that need to be DONE - when switching to Edit page
         hide();
         show('editWidth');
