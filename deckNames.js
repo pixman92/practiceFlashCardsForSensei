@@ -92,7 +92,7 @@ function extractDeckNameArray(){
 function addAnotherDeckToHTML(index, deckName, tags){
     // add HTML for another Deck
     var tmpArray = ['<div class="decksAndDeletes">',
-    '                  <div class="w3-container medMarginTop widthFull ">',
+    '                  <div class="w3-container medMarginTop ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
     '                          <div class="deckNameClass paddy">'+deckName+'</div>',
     '                          <div class="studyClass centerVertically">',
@@ -119,7 +119,7 @@ function addAnotherDeckToHTML(index, deckName, tags){
     var unjoined = tmpArray;
     tmpArray = tmpArray.join('');
 
-    copy(tmpArray);
+    // copy(tmpArray);
 
     $('.decksHTML').html($('.decksHTML').html() + tmpArray);
     return unjoined;
