@@ -165,7 +165,23 @@ function buttonListeners(){
         // }
     });
 
+    deckNamesHomeButtonsWithIndex();
+    // ==========================================================
+    
+    
+    
 }
+function deckNamesHomeButtonsWithIndex(index){
+    // Decks Home - button addEventListeners
+    $('.'+studyButton+index).on('click', ()=>{
+        hide();
+        
+    });
+}
+
+
+// =============================
+
 function deleteButtons(){
     // function to create and initialized Delete Buttons
     // to 'else' them, if 1 already exists

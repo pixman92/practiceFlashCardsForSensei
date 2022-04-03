@@ -17,6 +17,9 @@ window.onload = ()=>{
         
         buttonListeners();
         deleteButtons();
+        
+        addAnotherDeckToHTML(index, deckNamesJSON.JSONobj.innerArray[index][0][0][1], tags)
+
         // runClick();
         
         // debugger;    //set to debug at this line
