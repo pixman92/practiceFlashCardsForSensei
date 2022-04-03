@@ -117,17 +117,19 @@ function buttonListeners(){
     
     $('.backButtonFromEdit').on('click', ()=>{
         hide();
-        show('study');
+        show('decks')
+        // show('study');
     });
     
     $('.toDecks').on('click', ()=>{
         //all things that need to be DONE - when switching to Edit page
         hide();
-        show('editWidth');
-        show('editingCards');
-        retrieveIt();
-        populate();
-        deleteButtons();
+        show('decks');
+        // show('editWidth');
+        // show('editingCards');
+        // retrieveIt();
+        // populate();
+        // deleteButtons();
     });
 
     // =============================

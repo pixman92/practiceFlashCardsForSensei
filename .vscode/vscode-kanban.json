@@ -43,15 +43,6 @@
       "id": "4",
       "references": [],
       "title": "Reset Deck's Score %"
-    },
-    {
-      "assignedTo": {
-        "name": "TheArborist"
-      },
-      "creation_time": "2022-04-03T07:07:12.743Z",
-      "id": "9",
-      "references": [],
-      "title": "Buttons, 'back to deck' for both Pages"
     }
   ],
   "in-progress": [
@@ -76,28 +67,5 @@
       "title": "Get the JSON variables synced up correctly"
     }
   ],
-  "done": [
-    {
-      "assignedTo": {
-        "name": "TheArborist"
-      },
-      "creation_time": "2022-04-03T06:48:51.114Z",
-      "id": "8",
-      "references": [],
-      "title": "CSS - lower QA Editing - header"
-    },
-    {
-      "assignedTo": {
-        "name": "TheArborist"
-      },
-      "creation_time": "2022-04-03T06:35:39.536Z",
-      "description": {
-        "content": "makeInstanceFlashCards();\nfirstIndex(deckName);\naddQuestionAddAnswerToPushFlashCards('time?', 'noon');\n\ndeckNames - is a JSON\nsaveDeckNames() - saves it\n\n\ninitializeDeckNamesJSON() - pulls the data back, and inits the JSON ",
-        "mime": "text/markdown"
-      },
-      "id": "6",
-      "references": [],
-      "title": "What I've learned"
-    }
-  ]
+  "done": []
 }
