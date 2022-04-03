@@ -1,6 +1,6 @@
 
   // =================
-  var arrayOfClasses = ["study", "editingCards"];
+  var arrayOfClasses = ["study", "editingCards", 'decks'];
   function hide() {
       for (var i = 0; i < arrayOfClasses.length; i++) {
           // document.querySelector('.' + arrayOfClasses[i]).style.display = 'none';
