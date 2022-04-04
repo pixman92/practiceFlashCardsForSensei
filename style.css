@@ -190,3 +190,8 @@ grid-template-areas:
 .leftClass { grid-area: leftClass; }
 .HeaderTitleClass { grid-area: HeaderTitleClass; }
 .AddButtonClass { grid-area: AddButtonClass; }
+
+/* ============================= */
+.decks{
+  margin-bottom: 8.4em;
+}
