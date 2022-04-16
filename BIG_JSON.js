@@ -21,6 +21,10 @@ function saveBIGToLocal(){
     theBIGJSON.saveToLocalStorage('sam');
 }
 
+function pullBIG(){
+    theBIGJSON.insertJSON(localStorage.getItem('sam'));
+}
+
 
 // =============================
 
@@ -38,6 +42,8 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
     // makes a single deck, to be strung and sent to BIGJSON
 
     sharedWithEmails == ""? sharedWithEmails = "": undefined;
+
+    singleDeckJSON = new JSON_Instance();
 
     singleDeckJSON.JSONobj.innerArray[0] = [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()], ['tags', tags], ['cardData']];
 
@@ -71,9 +77,12 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
 
 // ===================
 
-function pushDeckToBIG(str){
+function pushDeckToBIG(){
     // actual function to send STRUNG JSON to BIGJSON
-    theBIGJSON.JSONobj.innerArray[1].push(str);
+    theBIGJSON.JSONobj.innerArray[1].push(singleDeckJSON.JSONobj.innerArray);
+
+    // increment the "DECK #" variable
+    theBIGJSON.JSONobj.innerArray[0][1][1]++;
 }
 
 // =============================
@@ -96,11 +105,19 @@ function pushCardDataToDeckAndReset(){
 
 // }
 
-function retrieveCardDataBasedOnIndex(index){
+function retrieveCardDataBasedOnIndex(deckIndex, cardIndex){
     //pulls back Q&A data
 
-    var question = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][0][1];
-    var answer = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][1][1];
+    // var question = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][0][1];
+    // var answer = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][1][1];
+
+    theBIGJSON.JSONobj.innerArray[1][1][0][6][1][0][0][0][1]
+
+
+    var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][1][0][0][0][1];
+
+    var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][1][0][0][0][1];
+
 
     console.log('Question? ', question);
     console.log('Answer? ', answer );
@@ -108,9 +125,9 @@ function retrieveCardDataBasedOnIndex(index){
 }
 
 // ===================
-function saveToLocalStorage(){
+// function saveToLocalStorage(){
 
-}
+// }
 
 
 // =============================
@@ -131,6 +148,17 @@ function run2(){
     
     makeCardDataJSON('favorite food?', 'pizza');
     pushCardDataToDeckAndReset();
+
+    pushDeckToBIG();
+
+
+    singleDeckJSONData('leo@gmail.com', 'history', 'null', 10, 'nope');
+    makeCardDataJSON('place to be?', 'home');
+    pushCardDataToDeckAndReset();
+    makeCardDataJSON('ice cream?', 'yes!');
+    pushCardDataToDeckAndReset();
+
+    pushDeckToBIG();
 }
 
 // ===================
