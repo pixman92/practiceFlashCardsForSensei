@@ -42,14 +42,16 @@ function makeCardDataJSON(question, answer){
     cardDataJSON.JSONobj.innerArray[0] = [[['question', question], ['answer', answer]]];
 }
 
-function dataCardToDeck(){
+function pushCardDataToDeckAndReset(){
     // singleDeckJSON.JSONobj.innerArray[0][6].push(['name', 'sam'])
     singleDeckJSON.JSONobj.innerArray[0][6].push(cardDataJSON.JSONobj.innerArray);
     cardDataJSON = new JSON_Instance();
 
 }
 
+// function pushCardDataToDeckAndReset(){
 
+// }
 
 // =============================
 function run(){
@@ -62,5 +64,10 @@ function run(){
 
     singleDeckJSONData('sam@gmail.com', 'math', 'leo@gmail.com', 10, 'nope');
 
-
+}
+function run2(){
+    pushCardDataToDeckAndReset();
+    
+    makeCardDataJSON('favorite food?', 'pizza');
+    pushCardDataToDeckAndReset();
 }
