@@ -39,11 +39,14 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
 // =============================
 
 function makeCardDataJSON(question, answer){
-    cardDataJSON.JSONobj.innerArray[0] = [[[0], ['question', question], ['answer', answer]]];
+    cardDataJSON.JSONobj.innerArray[0] = [[['question', question], ['answer', answer]]];
 }
 
-function dataCardToDeck(index){
-    singleDeckJSON.addToObj([[[0], ]])
+function dataCardToDeck(){
+    // singleDeckJSON.JSONobj.innerArray[0][6].push(['name', 'sam'])
+    singleDeckJSON.JSONobj.innerArray[0][6].push(cardDataJSON.JSONobj.innerArray);
+    cardDataJSON = new JSON_Instance();
+
 }
 
 
