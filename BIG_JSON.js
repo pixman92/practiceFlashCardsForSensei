@@ -51,6 +51,12 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
     theBIGJSON.JSONobj.innerArray[0][1][1]++;
 
 }
+
+function replaceDeckData(){
+    theBIGJSON.JSONobj.innerArray[1] = [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()], ['tags', tags], ['cardData']];
+
+
+}
 // ===================
 
 // functions to Push and Pull, DECK Data, to and From String form
@@ -126,19 +132,22 @@ function retrieveCardDataBasedOnIndex(deckIndex, cardIndex){
 }
 
 // ===================
-function editCard(deckIndex, cardIndex, replaceMent){
+function editCardQuestion(deckIndex, cardIndex, replacement){
+    theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][0][1] = replacement;
+}
+function editCardAnswer(deckIndex, cardIndex, replacement){
+    theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][1][1] = replacement;
+}
+
+function deleteCard(deckIndex, cardIndex, replacement){
 
 }
 
-function deleteCard(deckIndex, cardIndex, replaceMent){
+function editDeck(deckIndex, replacement){
 
 }
 
-function editDeck(deckIndex, replaceMent){
-
-}
-
-function deleteDeck(deckIndex, replaceMent){
+function deleteDeck(deckIndex, replacement){
 
 }
 
