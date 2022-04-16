@@ -9,6 +9,16 @@ function initJSONVariables(){
 }
 // =============================
 
+function createsBIG(email, numberOfDecks){
+    theBIGJSON.JSONobj.innerArray[0] = [['email', email], ['numberOfDecks', numberOfDecks]];
+
+}
+
+
+
+// =============================
+
+
 function uuidv4() {
 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -17,10 +27,13 @@ return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
 }
 
 
-function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore){
+function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, tags){
     sharedWithEmails == ""? sharedWithEmails = "": undefined;
 
-    singleDeckJSON.JSONobj.innerArray[0] = [[[0], [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()]]]];
+    singleDeckJSON.JSONobj.innerArray[0] = [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()], ['tags', tags], ['cardData']];
+
+    theBIGJSON.JSONobj.innerArray[0][1][1]++;
+
 }
 
 // =============================
@@ -29,14 +42,22 @@ function makeCardDataJSON(question, answer){
     cardDataJSON.JSONobj.innerArray[0] = [[[0], ['question', question], ['answer', answer]]];
 }
 
+function dataCardToDeck(index){
+    singleDeckJSON.addToObj([[[0], ]])
+}
 
 
 
 // =============================
 function run(){
     initJSONVariables();
+
+    createsBIG('sam@gmail.com', 0);
+
     makeCardDataJSON('time of day?', 'noon'); 
     cardDataJSON.print();
+
+    singleDeckJSONData('sam@gmail.com', 'math', 'leo@gmail.com', 10, 'nope');
 
 
 }
