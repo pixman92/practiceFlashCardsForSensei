@@ -12,6 +12,8 @@ function initJSONVariables(){
 function createsBIG(email, numberOfDecks){
     theBIGJSON.JSONobj.innerArray[0] = [['email', email], ['numberOfDecks', numberOfDecks]];
 
+    theBIGJSON.JSONobj.innerArray[1] = ['decks'];
+
 }
 
 
@@ -36,6 +38,10 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
 
 }
 
+function pushDeckToBIG(str){
+    theBIGJSON.JSONobj.innerArray[1].push(str);
+}
+
 // =============================
 
 function makeCardDataJSON(question, answer){
@@ -52,6 +58,21 @@ function pushCardDataToDeckAndReset(){
 // function pushCardDataToDeckAndReset(){
 
 // }
+
+function retrieveCardDataBasedOnIndex(index){
+    var question = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][0][1];
+    var answer = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][1][1];
+
+    console.log('Question? ', question);
+    console.log('Answer? ', answer );
+
+}
+
+// ===================
+function saveToLocalStorage(){
+
+}
+
 
 // =============================
 function run(){
@@ -71,3 +92,5 @@ function run2(){
     makeCardDataJSON('favorite food?', 'pizza');
     pushCardDataToDeckAndReset();
 }
+
+// ===================
