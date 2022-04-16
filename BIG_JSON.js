@@ -52,10 +52,25 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
 
 }
 
-function replaceDeckData(){
-    theBIGJSON.JSONobj.innerArray[1] = [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()], ['tags', tags], ['cardData']];
+function replaceDeckEmailOwner(index, newEmail){
+    theBIGJSON.JSONobj.innerArray[1][index][0][0][1] = newEmail;
 
+}
 
+function replacDeckTitle(index, newTitle){
+    theBIGJSON.JSONobj.innerArray[1][index][0][1][1] = newTitle;
+}
+
+function replacDeckSharedEmails(index, newArrayOfEmails){
+    theBIGJSON.JSONobj.innerArray[1][index][0][2][1] = newArrayOfEmails;
+}
+
+function replacDeckDeckScore(index, newDeckScore){
+    theBIGJSON.JSONobj.innerArray[1][index][0][3] = newDeckScore;
+}
+
+function replacDeckTags(index, newDeckTags){
+    theBIGJSON.JSONobj.innerArray[1][index][0][5] = newDeckTags;
 }
 // ===================
 
