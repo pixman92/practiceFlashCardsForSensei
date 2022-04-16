@@ -23,6 +23,7 @@ function saveBIGToLocal(){
 
 function pullBIG(){
     theBIGJSON.insertJSON(localStorage.getItem('sam'));
+    theBIGJSON.parseMe();
 }
 
 
@@ -82,7 +83,7 @@ function pushDeckToBIG(){
     theBIGJSON.JSONobj.innerArray[1].push(singleDeckJSON.JSONobj.innerArray);
 
     // increment the "DECK #" variable
-    theBIGJSON.JSONobj.innerArray[0][1][1]++;
+    theBIGJSON.JSONobj.innerArray[0][1][1] = theBIGJSON.JSONobj.innerArray[1].length-1;
 }
 
 // =============================
@@ -111,12 +112,12 @@ function retrieveCardDataBasedOnIndex(deckIndex, cardIndex){
     // var question = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][0][1];
     // var answer = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][1][1];
 
-    theBIGJSON.JSONobj.innerArray[1][1][0][6][1][0][0][0][1]
+    // theBIGJSON.JSONobj.innerArray[1][1][0][6][1][0][0][0][1]
 
 
-    var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][1][0][0][0][1];
+    var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][0][1];
 
-    var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][1][0][0][0][1];
+    var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][1][1];
 
 
     console.log('Question? ', question);
@@ -125,9 +126,22 @@ function retrieveCardDataBasedOnIndex(deckIndex, cardIndex){
 }
 
 // ===================
-// function saveToLocalStorage(){
+function editCard(deckIndex, cardIndex, replaceMent){
 
-// }
+}
+
+function deleteCard(deckIndex, cardIndex, replaceMent){
+
+}
+
+function editDeck(deckIndex, replaceMent){
+
+}
+
+function deleteDeck(deckIndex, replaceMent){
+
+}
+
 
 
 // =============================
