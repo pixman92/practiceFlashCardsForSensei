@@ -74,6 +74,23 @@ function replacDeckTags(index, newDeckTags){
 }
 // ===================
 
+function findIndex(nameToSearch){
+    var arrayOfNames = [];
+    for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
+        // debugger;
+        arrayOfNames.push(theBIGJSON.JSONobj.innerArray[1][i][0][1][1]);
+    }
+    console.log('DeckNames: ', arrayOfNames);
+}
+
+function findUIDs(){    
+    var arrayOfUIDs = [];
+    for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
+        arrayOfUIDs.push(theBIGJSON.JSONobj.innerArray[1][i][0][4][1]);
+    }
+    console.log('UIDs ', arrayOfUIDs);
+}
+
 // functions to Push and Pull, DECK Data, to and From String form
 // function singleDeckToString(){
 //     return singleDeckJSON.stringMe();
