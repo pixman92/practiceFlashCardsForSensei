@@ -104,7 +104,7 @@ function findUIDs(UID){
     //         savedIndexOfUID = index;
     //     }
     // });
-    // savedIndexOfUID++;
+    savedIndexOfUID++;
     console.log('Deck ', theBIGJSON.JSONobj.innerArray[1][savedIndexOfUID][0][1][1]);
 
 }
@@ -235,3 +235,16 @@ function run2(){
 }
 
 // ===================
+
+function getURL(){
+
+    // logs "?query=fetch&page=2"
+    // var get = URL.searchParams.get( 'query');
+    // console.log('getURL ', get);
+
+
+    const queryString = window.location.href;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get('query');
+    console.log('URL, ', value);
+}
