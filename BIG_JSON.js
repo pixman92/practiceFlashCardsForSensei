@@ -235,16 +235,11 @@ function run2(){
 }
 
 // ===================
-
-function getURL(){
-
-    // logs "?query=fetch&page=2"
-    // var get = URL.searchParams.get( 'query');
-    // console.log('getURL ', get);
-
+var value;
+function getURL(str){
 
     const queryString = window.location.href;
     const parameters = new URLSearchParams(queryString);
-    const value = parameters.get('query');
+    value = parameters.get(str);
     console.log('URL, ', value);
 }
