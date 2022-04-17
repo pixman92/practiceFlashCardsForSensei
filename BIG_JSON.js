@@ -83,12 +83,30 @@ function findIndex(nameToSearch){
     console.log('DeckNames: ', arrayOfNames);
 }
 
-function findUIDs(){    
+var savedIndexOfUID = -1;
+function findUIDs(UID){    
     var arrayOfUIDs = [];
     for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
         arrayOfUIDs.push(theBIGJSON.JSONobj.innerArray[1][i][0][4][1]);
     }
     console.log('UIDs ', arrayOfUIDs);
+
+
+    for(var i=0; i<=arrayOfUIDs.length; i++){
+        debugger;
+        if(arrayOfUIDs[i]==UID){
+            savedIndexOfUID = i;
+        }
+    }
+    // arrayOfUIDs.forEach((item, index)=>{
+    //     debugger;
+    //     if(item == UID){
+    //         savedIndexOfUID = index;
+    //     }
+    // });
+    // savedIndexOfUID++;
+    console.log('Deck ', theBIGJSON.JSONobj.innerArray[1][savedIndexOfUID][0][1][1]);
+
 }
 
 // functions to Push and Pull, DECK Data, to and From String form
