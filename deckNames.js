@@ -189,17 +189,17 @@ function pullOutAllDeckData(){
     // makes ever Deck Name Editible, then saves that edit to JSON
     // TODO - this for every DECK Name/Tags, shared emails
     // (TODO) Tags need to be separated by ','s
-    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 1; i++){
-        $('.deckNameClass'+i).attr("contenteditable", "true");
-        console.log('new Deckname:', $('.deckNameClass'+i).val());
+    for(var ii=0; ii<theBIGJSON.JSONobj.innerArray[1].length- 1; ii++){
+        $('.deckNameClass'+ii).attr("contenteditable", "true");
+        console.log('new Deckname:', $('.deckNameClass'+ii).val());
     }
-    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length-2; i++){
+    for(var iii=0; iii<theBIGJSON.JSONobj.innerArray[1].length-2; iii++){
         debugger;
-        $('.deckNameClass'+i).on('blur keyup paste input', ()=>{
+        $('.deckNameClass'+iii).on('blur keyup paste input', ()=>{
             // console.log('new data! ', $('.deckNameClass'+i).val());
             // debugger;
-            console.log('i', i);
-            replaceDeckTitle(i, $('.deckNameClass'+i).text());    
+            console.log('i', iii);
+            replaceDeckTitle(iii, $('.deckNameClass'+iii).text());    
         });
 
     }
