@@ -193,19 +193,15 @@ function pullOutAllDeckData(){
         $('.deckNameClass'+ii).attr("contenteditable", "true");
         console.log('new Deckname:', $('.deckNameClass'+ii).val());
     }
-    // for(var iii=0; iii<theBIGJSON.JSONobj.innerArray[1].length-2; iii++){
-    //     debugger;
-    //     $('.deckNameClass'+iii).on('blur keyup paste input', ()=>{
-    //         // console.log('new data! ', $('.deckNameClass'+i).val());
-    //         // debugger;
-    //         console.log('iii', iii);
-    //         replaceDeckTitle(iii, $('.deckNameClass'+iii).text());    
-    //     });
+    for(let iii=0; iii<theBIGJSON.JSONobj.innerArray[1].length; iii++){
+        // debugger;
+        $('.deckNameClass'+iii).on('blur keyup paste input', ()=>{
+            
+            console.log('iii', iii);
+            replaceDeckTitle(iii, $('.deckNameClass'+iii).text());    
+        });
 
-    // }
-
-
-    // var i=1;
+    }
 }
 
 function newDeckAsk(){
@@ -231,3 +227,5 @@ function newDeckMake(){
     // repouplate the DECK Screen
     pullOutAllDeckData();
 }
+
+function 
