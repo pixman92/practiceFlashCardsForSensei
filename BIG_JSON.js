@@ -137,7 +137,7 @@ function findUIDs(UID){
 
 function pushDeckToBIG(){
     // actual function to send STRUNG JSON to BIGJSON
-    theBIGJSON.JSONobj.innerArray[1].push(singleDeckJSON.JSONobj.innerArray);
+    theBIGJSON.JSONobj.innerArray[1].unshift(singleDeckJSON.JSONobj.innerArray);
     // singleDeckJSON
 
     // increment the "DECK #" variable

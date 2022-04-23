@@ -172,7 +172,7 @@ function printDeckNameArray(){
 // ======================================
 function pullOutAllDeckData(){
     $('.decksHTML').html("");
-    for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
+    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length-1; i++){
         // debugger;
         console.log('name', theBIGJSON.JSONobj.innerArray[1][i][0][1][1]);
         console.log('tags', theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);
@@ -184,11 +184,16 @@ function pullOutAllDeckData(){
     // var i=1;
 }
 
-function newDeck(){
+function newDeckAsk(){
     $('.decksHTML').hide();
     $('.decksHTML').html("<div class='newDeckName center fromTop'><textarea class='nameData'></textarea><div><button class='addNewDeck'>Add</div>");
     $('.decksHTML').show();
+}
 
+function newDeckMake(){
     var nameData = $('.nameData').val();
     console.log('nameData', nameData);
+
+    singleDeckJSONData('sam', nameData, '...', 10, ['nope']);
+    pushDeckToBIG();
 }
