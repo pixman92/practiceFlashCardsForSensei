@@ -20,3 +20,6 @@ What still doesn't work?
 ===================
 - make new Deck info > add New Deck to BIGJSON
 - repopulate DECK Screen
+(singleDeckJSONData())
+(pushCardDataToDeckAndReset())
+- pull All DECK data > populate

@@ -159,3 +159,19 @@ function pullDeckNamesFromLocalStorage(){
 function printDeckNameArray(){
     deckNamesJSON.print();
 }
+
+
+
+
+
+
+
+// ======================================
+function pullOutAllDeckData(){
+    for(var i=0; i<theBIGJSON.JSONobj.innerArray.length; i++){
+        console.log('name', theBIGJSON.JSONobj.innerArray[1][i][0][1][1]);
+        console.log('tags', theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);
+        console.log('index', i);
+        console.log('===================');
+    }
+}
