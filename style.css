@@ -49,8 +49,8 @@
   margin-top: 3em;
 }
 
-.editingTop{
-  /* grid for top of editing page */
+/* .editingTop{
+  grid for top of editing page
 display: grid;
 grid-template-columns: 5% 97% 2%;
 grid-template-rows: 1fr;
@@ -62,7 +62,28 @@ grid-template-areas:
 
 .backButtonClass { grid-area: backButtonClass; }
 .nameClass { grid-area: nameClass; }
-.saveButtonClass { grid-area: saveButtonClass; }
+.saveButtonClass { grid-area: saveButtonClass; } */
+
+.editingTop{
+    position: fixed;
+    left: 0;
+    top: 0em;
+    width: 100vw;
+    /* background-color: #222; */
+  /*   color: white; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  /*   flex-grow: 1; */
+  /*   align-items: center; */
+    margin-top:.8em;
+}
+
+.editingTop div{
+  margin: auto;
+  font-size: 5vh;
+}
 
 /* ================= */
 .boxesGrid {  
@@ -177,19 +198,37 @@ grid-template-areas:
 /* Main Deck - html page */
 
 .topDeck { 
-  margin-top: .8em;
+  /* margin-top: .8em;
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "leftClass HeaderTitleClass AddButtonClass";
+    "leftClass HeaderTitleClass AddButtonClass"; */
+
+  position: fixed;
+  left: 0;
+  top: 0em;
+  width: 100%;
+/*   color: white; */
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+/*   flex-grow: 1; */
+/*   align-items: center; */
+  margin-top:.8em;
 }
 
+.topDeck div{
+  margin: 1vh;
+  font-size: 5vh;
+}
+/* 
 .leftClass { grid-area: leftClass; }
 .HeaderTitleClass { grid-area: HeaderTitleClass; }
-.AddButtonClass { grid-area: AddButtonClass; }
+.AddButtonClass { grid-area: AddButtonClass; } */
 
 /* ============================= */
 .decks{
