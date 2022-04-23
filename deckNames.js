@@ -169,7 +169,8 @@ function printDeckNameArray(){
 
 
 
-// ======================================
+// =========================================================
+// NEWLY Updated data - April 2022
 function pullOutAllDeckData(){
     $('.decksHTML').html("");
     for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length-1; i++){
@@ -184,12 +185,21 @@ function pullOutAllDeckData(){
         addAnotherDeckToHTML(i, theBIGJSON.JSONobj.innerArray[1][i][0][1][1], theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);    
 
     }
+    // makes ever Deck Name Editible, then saves that edit to JSON
+    // TODO - this for every DECK Name/Tags, shared emails
+    // (TODO) Tags need to be separated by ','s
     for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 1; i++){
         $('.deckNameClass'+i).attr("contenteditable", "true");
         console.log('new Deckname:', $('.deckNameClass'+i).val());
-        $('.deckNameClass'+i).on('change', ()=>{
-            console.log('new data! ', $('.deckNameClass'+i).val());
+    }
+    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 1; i++){
+        // debugger;
+        $('.deckNameClass'+i).on('input', ()=>{
+            // debugger;
+            // console.log('new data! ', $('.deckNameClass'+i).val());
+            replaceDeckTitle(i, $('.deckNameClass'+i).val());    
         });
+
     }
 
 

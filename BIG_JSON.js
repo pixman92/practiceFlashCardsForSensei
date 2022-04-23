@@ -58,19 +58,19 @@ function replaceDeckEmailOwner(index, newEmail){
 
 }
 
-function replacDeckTitle(index, newTitle){
+function replaceDeckTitle(index, newTitle){
     theBIGJSON.JSONobj.innerArray[1][index][0][1][1] = newTitle;
 }
 
-function replacDeckSharedEmails(index, newArrayOfEmails){
+function replaceDeckSharedEmails(index, newArrayOfEmails){
     theBIGJSON.JSONobj.innerArray[1][index][0][2][1] = newArrayOfEmails;
 }
 
-function replacDeckDeckScore(index, newDeckScore){
+function replaceDeckDeckScore(index, newDeckScore){
     theBIGJSON.JSONobj.innerArray[1][index][0][3] = newDeckScore;
 }
 
-function replacDeckTags(index, newDeckTags){
+function replaceDeckTags(index, newDeckTags){
     theBIGJSON.JSONobj.innerArray[1][index][0][5] = newDeckTags;
 }
 // ===================
