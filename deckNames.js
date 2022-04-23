@@ -182,6 +182,7 @@ function pullOutAllDeckData(){
         
         // function that populates decks
         // needs, to index every keypoint
+        console.log('i for index', i);
         addAnotherDeckToHTML(i, theBIGJSON.JSONobj.innerArray[1][i][0][1][1], theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);    
 
     }
@@ -192,12 +193,13 @@ function pullOutAllDeckData(){
         $('.deckNameClass'+i).attr("contenteditable", "true");
         console.log('new Deckname:', $('.deckNameClass'+i).val());
     }
-    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 2   ; i++){
-        // debugger;
-        $('.deckNameClass'+i).on('input', ()=>{
+    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length-2; i++){
+        debugger;
+        $('.deckNameClass'+i).on('blur keyup paste input', ()=>{
             // console.log('new data! ', $('.deckNameClass'+i).val());
             // debugger;
-            replaceDeckTitle(i, $('.deckNameClass'+i).val());    
+            console.log('i', i);
+            replaceDeckTitle(i, $('.deckNameClass'+i).text());    
         });
 
     }
