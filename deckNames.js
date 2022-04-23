@@ -183,3 +183,7 @@ function pullOutAllDeckData(){
 
     // var i=1;
 }
+
+function newDeck(){
+    
+}
