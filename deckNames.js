@@ -168,10 +168,10 @@ function printDeckNameArray(){
 
 // ======================================
 function pullOutAllDeckData(){
-    for(var i=1; i<=theBIGJSON.JSONobj.innerArray[1].length; i++){
-        debugger;
-        console.log('name', theBIGJSON.JSONobj.innerArray[i][1][0][1][1]);
-        console.log('tags', theBIGJSON.JSONobj.innerArray[i][1][0][5][1]);
+    for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
+        // debugger;
+        console.log('name', theBIGJSON.JSONobj.innerArray[1][i][0][1][1]);
+        console.log('tags', theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);
         console.log('index', i);
         console.log('===================');
     }
