@@ -230,7 +230,6 @@ function newButtonListeners(){
     });
 
     // function allDeckNames(){
-        for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
-            $('.deckNameClass'+i).attr("contenteditable", "true");
-        }    // }
+            // }
+
 }
