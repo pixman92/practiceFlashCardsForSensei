@@ -96,7 +96,7 @@ function addAnotherDeckToHTML(index, deckName, tags){
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
-    '                          <div class="deckNameClass paddy">'+deckName+'</div>',
+    '                          <div class="deckNameClass'+index+' paddy">'+deckName+'</div>',
     '                          <div class="studyClass centerVertically">',
     '                              <button class="studyButton'+index+'">Study</button>',
     '                          </div>',
@@ -178,6 +178,9 @@ function pullOutAllDeckData(){
         console.log('tags', theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);
         console.log('index', i);
         console.log('===================');
+
+        // function that populates decks
+        // needs, to index every keypoint
         addAnotherDeckToHTML(i, theBIGJSON.JSONobj.innerArray[1][i][0][1][1], theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);    
     }
 

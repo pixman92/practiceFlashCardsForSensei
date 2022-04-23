@@ -203,7 +203,10 @@ function deleteDeck(deckIndex, replacement){
 
 }
 
-
+function retrieveDeckNameInfo(name){
+    var index = name.substr(13, name.length);
+    return index;    
+}
 
 // =============================
 function run(){
