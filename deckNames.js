@@ -228,4 +228,4 @@ function newDeckMake(){
     pullOutAllDeckData();
 }
 
-function 
+// function 

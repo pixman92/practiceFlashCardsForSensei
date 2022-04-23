@@ -231,4 +231,10 @@ function addBlankBox(newIndex){
 }
 
 
-// function mak
+function populateQABoxes(deckIndex, cardIndex){
+    var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][0][1];
+    var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][1][1];
+
+    console.log('question: ', question);
+    console.log('answer: ', answer);
+}
