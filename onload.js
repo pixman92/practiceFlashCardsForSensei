@@ -4,6 +4,8 @@ window.onload = ()=>{
     // show('editingCards');
     
     run();
+
+    newButtonLisenters();
     
     // addQuestionAddAnswerToPushFlashCards('', '');
     

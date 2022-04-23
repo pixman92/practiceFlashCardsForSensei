@@ -186,7 +186,7 @@ function pullOutAllDeckData(){
 
 function newDeckAsk(){
     $('.decksHTML').hide();
-    $('.decksHTML').html("<div class='newDeckName center fromTop'><textarea class='nameData'></textarea><div><button class='addNewDeck'>Add</div>");
+    $('.decksHTML').html("<div class='newDeckName center fromTop'><textarea class='nameData'></textarea><div><button class='addNewDeckButton'>Add</div>");
     $('.decksHTML').show();
 }
 
@@ -194,6 +194,13 @@ function newDeckMake(){
     var nameData = $('.nameData').val();
     console.log('nameData', nameData);
 
+    // add name to NEW DECK
     singleDeckJSONData('sam', nameData, '...', 10, ['nope']);
+    // push that new DECK to BIG JSON
     pushDeckToBIG();
+    
+
+    $('.decksHTML').show();
+    // repouplate the DECK Screen
+    pullOutAllDeckData();
 }

@@ -212,6 +212,20 @@ function deleteButtons(){
 // ======================================
 // UPDATED - Event Listeners - April 2022
 
-function newButtonListers(){
-    $('')
+function newButtonLisenters(){
+    // new Deck button
+    $('.addButton').on('click', ()=>{
+        newDeckAsk();
+    });
+
+    // adding New Deck data to BIGJSON
+    $('.addNewDeckButton').on('click', ()=>{
+        debugger;
+        if($('.newData').val()!=""){
+            debugger;
+            newDeckMake();
+        }else{
+            console.log('NO Name Data!');
+        }
+    });
 }
