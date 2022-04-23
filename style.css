@@ -225,7 +225,7 @@ grid-template-areas:
 
 .topDeck div{
   margin: 1vh;
-  font-size: 5vh;
+  font-size: 3vh;
 }
 /* 
 .leftClass { grid-area: leftClass; }
@@ -235,4 +235,9 @@ grid-template-areas:
 /* ============================= */
 .decks{
   margin-bottom: 8.4em;
+}
+
+/* =================== */
+.fromTop{
+  margin-top: 25vh;
 }

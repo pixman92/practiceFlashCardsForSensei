@@ -185,5 +185,10 @@ function pullOutAllDeckData(){
 }
 
 function newDeck(){
-    
+    $('.decksHTML').hide();
+    $('.decksHTML').html("<div class='newDeckName center fromTop'><textarea class='nameData'></textarea><div><button class='addNewDeck'>Add</div>");
+    $('.decksHTML').show();
+
+    var nameData = $('.nameData').val();
+    console.log('nameData', nameData);
 }
