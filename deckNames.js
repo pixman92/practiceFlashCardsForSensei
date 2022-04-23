@@ -91,6 +91,8 @@ function extractDeckNameArray(){
 
 function addAnotherDeckToHTML(index, deckName, tags){
     // add HTML for another Deck
+
+
     var tmpArray = ['<div class="decksAndDeletes">',
     '                  <div class="w3-container medMarginTop ">',
     '                      <div class="deckStyling borderBlue widthFull center wayMarginTop">',
@@ -120,6 +122,7 @@ function addAnotherDeckToHTML(index, deckName, tags){
     tmpArray = tmpArray.join('');
 
     // copy(tmpArray);
+
 
     $('.decksHTML').html($('.decksHTML').html() + tmpArray);
     return unjoined;
@@ -168,11 +171,15 @@ function printDeckNameArray(){
 
 // ======================================
 function pullOutAllDeckData(){
+    $('.decksHTML').html("");
     for(var i=1; i<theBIGJSON.JSONobj.innerArray[1].length; i++){
         // debugger;
         console.log('name', theBIGJSON.JSONobj.innerArray[1][i][0][1][1]);
         console.log('tags', theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);
         console.log('index', i);
         console.log('===================');
+        addAnotherDeckToHTML(i, theBIGJSON.JSONobj.innerArray[1][i][0][1][1], theBIGJSON.JSONobj.innerArray[1][i][0][5][1]);    
     }
+
+    // var i=1;
 }

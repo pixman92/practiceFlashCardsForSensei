@@ -69,7 +69,7 @@ grid-template-areas:
     left: 0;
     top: 0em;
     width: 100vw;
-    /* background-color: #222; */
+    background-color: white;
   /*   color: white; */
     text-align: center;
     display: flex;
@@ -211,6 +211,7 @@ grid-template-areas:
   left: 0;
   top: 0em;
   width: 100%;
+  background-color: white;
 /*   color: white; */
   text-align: center;
   display: flex;
@@ -218,7 +219,8 @@ grid-template-areas:
   justify-content: space-between;
 /*   flex-grow: 1; */
 /*   align-items: center; */
-  margin-top:.8em;
+  /* margin-top:.8em; */
+  padding: 2vh;
 }
 
 .topDeck div{
