@@ -15,3 +15,8 @@ What still doesn't work?
 - DECK add button
 - deck - study button
 - deck - edit button
+
+
+===================
+- make new Deck info > add New Deck to BIGJSON
+- repopulate DECK Screen

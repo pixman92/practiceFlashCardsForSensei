@@ -48,6 +48,7 @@ function singleDeckJSONData(emailOwner, deckTitle, sharedWithEmails, deckScore, 
 
     singleDeckJSON.JSONobj.innerArray[0] = [['emailOwner', emailOwner],['deckTitle', deckTitle], ['sharedWithEmails', sharedWithEmails], ['deckScore', deckScore], ['UID', uuidv4()], ['tags', tags], ['cardData']];
 
+    // increment the # of Decks
     theBIGJSON.JSONobj.innerArray[0][1][1]++;
 
 }
@@ -163,7 +164,7 @@ function pushCardDataToDeckAndReset(){
 // }
 
 function retrieveCardDataBasedOnIndex(deckIndex, cardIndex){
-    //pulls back Q&A data
+    //pulls back Q&A data, based on deckIndex & cardIndex
 
     // var question = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][0][1];
     // var answer = singleDeckJSON.JSONobj.innerArray[0][6][index][0][0][1][1];
