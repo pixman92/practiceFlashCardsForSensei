@@ -192,11 +192,11 @@ function pullOutAllDeckData(){
         $('.deckNameClass'+i).attr("contenteditable", "true");
         console.log('new Deckname:', $('.deckNameClass'+i).val());
     }
-    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 1; i++){
+    for(var i=0; i<theBIGJSON.JSONobj.innerArray[1].length- 2   ; i++){
         // debugger;
         $('.deckNameClass'+i).on('input', ()=>{
-            // debugger;
             // console.log('new data! ', $('.deckNameClass'+i).val());
+            // debugger;
             replaceDeckTitle(i, $('.deckNameClass'+i).val());    
         });
 
