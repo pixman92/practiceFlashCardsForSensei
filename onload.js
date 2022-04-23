@@ -4,8 +4,8 @@ window.onload = ()=>{
     // show('editingCards');
     
     run();
+    newButtonListeners();
 
-    newButtonLisenters();
     
     // addQuestionAddAnswerToPushFlashCards('', '');
     
@@ -17,7 +17,7 @@ window.onload = ()=>{
     //     // debugger;    //set to debug at this line
     //     firstIndex('karate');
     //     addBlankBox(1)
-    //     $('.addBoxesHTMLHere').html(blankBoxHTML);
+    //     $('.addBoxesHTMLHere')wi.html(blankBoxHTML);
         
     //     buttonListeners();
     //     deleteButtons();

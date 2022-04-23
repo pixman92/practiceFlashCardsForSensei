@@ -212,7 +212,7 @@ function deleteButtons(){
 // ======================================
 // UPDATED - Event Listeners - April 2022
 
-function newButtonLisenters(){
+function newButtonListeners(){
     // new Deck button
     $('.addButton').on('click', ()=>{
         newDeckAsk();

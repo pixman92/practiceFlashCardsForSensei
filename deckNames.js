@@ -188,6 +188,9 @@ function newDeckAsk(){
     $('.decksHTML').hide();
     $('.decksHTML').html("<div class='newDeckName center fromTop'><textarea class='nameData'></textarea><div><button class='addNewDeckButton'>Add</div>");
     $('.decksHTML').show();
+    
+    // this is needed because the HTML added is dynamic
+    newButtonListeners();
 }
 
 function newDeckMake(){
