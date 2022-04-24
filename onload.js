@@ -1,7 +1,7 @@
 window.onload = ()=>{
     hide();
-    show('decks');
-    // show('editingCards');
+    // show('decks');
+    show('editingCards');
     
     run();
     newButtonListeners();
