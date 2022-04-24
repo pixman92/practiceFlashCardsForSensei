@@ -46,7 +46,7 @@
 /* ================= */
 
 .editingCards {
-  margin-top: 3em;
+  margin-top: 11vh;
 }
 
 /* .editingTop{
@@ -147,7 +147,7 @@ grid-template-areas:
 }
 
 .marginTop{
-  margin-top:2vh;
+  margin-top:4vh;
 }
 /* ============================= */
 .hidden{
@@ -237,7 +237,16 @@ grid-template-areas:
   margin-bottom: 8.4em;
 }
 
+.addNewAQBoxButton{
+  margin-top: 10vh;
+}
+
 /* =================== */
 .fromTop{
   margin-top: 25vh;
+}
+
+/* =================== */
+.smallFont{
+  font-size: 2vh;
 }

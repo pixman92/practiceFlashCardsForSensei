@@ -23,6 +23,7 @@ function changeCSSFunction(){
         console.log('you are small!');
         // debugger;
         changeCSS('editWidth', ['widthFull']);
+        changeCSS('editingCards div', ['widthFull', 'smallFont']);
         
     }
 }
