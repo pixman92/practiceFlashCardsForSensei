@@ -80,10 +80,10 @@ grid-template-areas:
     margin-top:.8em;
 }
 
-.editingTop div{
+/* .editingTop div{
   margin: auto;
   font-size: 5vh;
-}
+} */
 
 /* ================= */
 .boxesGrid {  
@@ -136,7 +136,7 @@ grid-template-areas:
 
 /* ================= */
 .widthFull{
-  width: 88%;
+  width: 100vw;
 }
 .right{
   right:0;
@@ -249,4 +249,7 @@ grid-template-areas:
 /* =================== */
 .smallFont{
   font-size: 2vh;
+}
+.mediumFont{
+  font-size: 4vh;
 }

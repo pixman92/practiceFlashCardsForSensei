@@ -19,12 +19,16 @@ function changeCSSFunction(){
     var widthMe = $('body').width();
     // console.log('widthMe', widthMe);
 
-    if(widthMe<=800){
+    if(widthMe<=450){
         console.log('you are small!');
         // debugger;
         // changeCSS('editWidth', ['widthFull']);
         changeCSS('editingTop', ['widthFull', 'smallFont']);
         // $('.editingCards div').addClass('smallFont');
+    }
+    if(widthMe>=451){
+        console.log('you are Medium');
+        changeCSS('editingTop', ['widthFull', 'mediumFont']);
     }
 }
 

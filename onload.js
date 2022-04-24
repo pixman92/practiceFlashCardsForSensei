@@ -2,6 +2,8 @@ window.onload = ()=>{
     hide();
     // show('decks');
     show('editingCards');
+
+    changeCSSFunction();
     
     run();
     newButtonListeners();
