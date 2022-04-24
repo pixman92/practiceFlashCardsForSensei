@@ -241,9 +241,11 @@ function populateQABoxes(deckIndex, cardIndex){
 
 function runThroughQABoxes(){
 
-    for(let i=0; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
+    for(let i=1; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
+        // debugger;
         var question = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][0][1];    
         var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
+        // debugger;
         addQABox(i, question, answer);
     }
 
@@ -253,7 +255,7 @@ function runThroughQABoxes(){
         htmlString += item;
     });
 
-    indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
+    indexOfBlank = theBIGJSON.JSONobj.innerArray[1][0][0][6].length;
 
     // adds a Blank Box
     addBlankBox(indexOfBlank);    
