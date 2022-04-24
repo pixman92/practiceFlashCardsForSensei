@@ -22,12 +22,12 @@ function changeCSSFunction(){
     if(widthMe<=800){
         console.log('you are small!');
         // debugger;
-        changeCSS('editWidth', ['widthFull']);
-        changeCSS('editingCards div', ['widthFull', 'smallFont']);
-        
+        // changeCSS('editWidth', ['widthFull']);
+        changeCSS('editingTop', ['widthFull', 'smallFont']);
+        // $('.editingCards div').addClass('smallFont');
     }
 }
 
-function startupCSS(){
-    changeCSS('editingCards ', ['widthFull', 'center']);
-}
+// function startupCSS(){
+//     changeCSS('editingCards ', ['widthFull', 'center']);
+// }
