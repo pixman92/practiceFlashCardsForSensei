@@ -238,3 +238,28 @@ function populateQABoxes(deckIndex, cardIndex){
     console.log('question: ', question);
     console.log('answer: ', answer);
 }
+
+function runThroughQABoxes(){
+
+    for(let i=0; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
+        var question = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][0][1];    
+        var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
+        addQABox(i, question, answer);
+    }
+
+    // this code parses the HTML array, pushes all to a Single String
+    var htmlString = "";
+    htmlArray.forEach((item, index)=>{
+        htmlString += item;
+    });
+
+    indexOfBlank = myJSONFlashCards.JSONobj.innerArray['length'];
+
+    // adds a Blank Box
+    addBlankBox(indexOfBlank);    
+
+    // debugger;
+
+    $('.addBoxesHTMLHere').html('');
+    $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);     
+}
