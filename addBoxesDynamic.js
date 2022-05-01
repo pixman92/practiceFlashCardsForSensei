@@ -144,6 +144,7 @@ function populate(){
 
 
 // ================================================
+// NEW CODE
 var htmlArray=[];
 function addQABox(index, question, answer){
     // function designed to make the QA boxes
