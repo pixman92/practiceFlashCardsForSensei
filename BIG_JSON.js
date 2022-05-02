@@ -241,10 +241,10 @@ function run2(){
 
 // ===================
 var value;
-function getURL(str){
+function getURL(){
 
     const queryString = window.location.href;
     const parameters = new URLSearchParams(queryString);
-    value = parameters.get(str);
+    value = parameters.get('q');
     console.log('URL, ', value);
 }

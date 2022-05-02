@@ -233,6 +233,7 @@ function addBlankBox(newIndex){
 
 
 function populateQABoxes(deckIndex, cardIndex){
+    // A function that pulls QA boxes
     var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][0][1];
     var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][1][1];
 
@@ -245,7 +246,7 @@ function runThroughQABoxes(){
     for(let i=1; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
         // debugger;
         var question = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][0][1];    
-        var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
+            var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
         // debugger;
         addQABox(i, question, answer);
     }
