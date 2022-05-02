@@ -272,8 +272,21 @@ function runThroughQABoxes(){
 // ===================
 function saveQABoxes(){
     // function to save ALL QA box data!
-    var question = $('.question'+1).val();
-    var answer = $('.answer'+1).val();
+    var len = theBIGJSON.JSONobj.innerArray[1].length - 1;
+    var endOfArray = theBIGJSON.JSONobj.innerArray[1].length;
+    var newLen;
+    if ($('.question'+endOfArray).val()!='' || $('.answer'+endOfArray).val()!=''){
+        newLen = len+1;
+    }else{
+        newLen = len;
+    }
+    for(var i=0; i<newLen; i++){
+        debugger;
 
-    addQuestionAddAnswerToPushFlashCards(question, answer);
+        var question = $('.question'+1).val();
+        var answer = $('.answer'+1).val();
+        
+        addQuestionAddAnswerToPushFlashCards(question, answer);
+    }
+        
 }
