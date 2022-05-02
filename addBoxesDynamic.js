@@ -246,7 +246,7 @@ function runThroughQABoxes(){
     for(let i=1; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
         // debugger;
         var question = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][0][1];    
-            var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
+        var answer = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][1][1];
         // debugger;
         addQABox(i, question, answer);
     }
@@ -266,4 +266,14 @@ function runThroughQABoxes(){
 
     $('.addBoxesHTMLHere').html('');
     $('.addBoxesHTMLHere').html(htmlString + blankBoxHTML);     
+}
+
+
+// ===================
+function saveQABoxes(){
+    // function to save ALL QA box data!
+    var question = $('.question'+1).val();
+    var answer = $('.answer'+1).val();
+
+    addQuestionAddAnswerToPushFlashCards(question, answer);
 }
