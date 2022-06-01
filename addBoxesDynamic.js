@@ -148,6 +148,8 @@ function populate(){
 var htmlArray=[];
 function addQABox(index, question, answer){
     // function designed to make the QA boxes
+    // contious add to a String
+    // then push to an Array
     if(!index){
         console.log('UNDEFINED! Try again');
     }else{
@@ -234,6 +236,7 @@ function addBlankBox(newIndex){
 
 function populateQABoxes(deckIndex, cardIndex){
     // A function that pulls QA boxes
+    // from theBIGJSON (custom JSON obj)
     var question = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][0][1];
     var answer = theBIGJSON.JSONobj.innerArray[1][deckIndex][0][6][cardIndex][0][0][1][1];
 
@@ -243,6 +246,7 @@ function populateQABoxes(deckIndex, cardIndex){
 
 function runThroughQABoxes(){
 
+    // for the length of QA items in custom JSON obj
     for(let i=1; i<=theBIGJSON.JSONobj.innerArray[1][0][0][6].length-1; i++){
         // debugger;
         var question = theBIGJSON.JSONobj.innerArray[1][0][0][6][i][0][0][0][1];    
@@ -257,7 +261,7 @@ function runThroughQABoxes(){
         htmlString += item;
     });
 
-    indexOfBlank = theBIGJSON.JSONobj.innerArray[1][0][0][6].length;
+    indexOfBlank = theBIGJSON.JSONobj.innerArray[1][0][0][6].length;        // the next index of a NEW Blank Box
 
     // adds a Blank Box
     addBlankBox(indexOfBlank);    
@@ -272,13 +276,15 @@ function runThroughQABoxes(){
 // ===================
 function saveQABoxes(){
     // function to save ALL QA box data!
-    var len = theBIGJSON.JSONobj.innerArray[1].length - 1;
+    // var len = theBIGJSON.JSONobj.innerArray[1].length - 1;
     var endOfArray = theBIGJSON.JSONobj.innerArray[1].length;
     var newLen;
     if ($('.question'+endOfArray).val()!='' || $('.answer'+endOfArray).val()!=''){
-        newLen = len+1;
+        newLen = endOfArray;
+        debugger;
     }else{
-        newLen = len;
+        newLen = endOfArray -1;
+        debugger
     }
     for(var i=0; i<newLen; i++){
         debugger;
@@ -286,7 +292,8 @@ function saveQABoxes(){
         var question = $('.question'+1).val();
         var answer = $('.answer'+1).val();
         
-        addQuestionAddAnswerToPushFlashCards(question, answer);
+        makeCardDataJSON(question, answer);
+        debugger;
     }
         
 }
